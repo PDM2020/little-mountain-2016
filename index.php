@@ -1,40 +1,17 @@
 <?php
 /**
- * The main template file.
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
  *
- * @package LMLA2016_Theme
+ * @package WordPress
  */
 
-get_header(); ?>
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define('WP_USE_THEMES', true);
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content' ); ?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+/** Loads the WordPress Environment and Template */
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
