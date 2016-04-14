@@ -21,10 +21,18 @@ function lmla_setup() {
 	// Enable support for Post Thumbnails on posts and pages.
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html( 'Primary Menu' ),
-	) );
+	// Register Navigation Menus
+function lmla_navigation_menus() {
+
+	$locations = array(
+		'header-menu' => __( 'Primary Header Navigation', 'lmla2016' ),
+		'mobile-menu' => __( 'Mobile Header Navigation', 'lmla2016' ),
+		'footer-menu' => __( 'Footer Navigation', 'lmla2016' ),
+	);
+	register_nav_menus( $locations );
+
+}
+add_action( 'init', 'lmla_navigation_menus' );
 
 	// Switch search form, comment form, and comments to output valid HTML5.
 	add_theme_support( 'html5', array(
@@ -45,7 +53,7 @@ add_action( 'after_setup_theme', 'lmla_setup' );
  * @global int $content_width
  */
 function lmla_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'lmla_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'lmla_content_width', 1024 );
 }
 add_action( 'after_setup_theme', 'lmla_content_width', 0 );
 
@@ -79,13 +87,18 @@ function lmla_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 }
 add_filter( 'stylesheet_uri', 'lmla_minified_css', 10, 2 );
 
-/**
- * Enqueue scripts and styles.
- */
+// Enqueue fontawesome and custom js jquery.
 function lmla_scripts() {
 	wp_enqueue_style( 'lmla-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'font-awesome-cdn', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
-	wp_enqueue_script( 'lmla-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+		wp_enqueue_script( 'lmla-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+
+		wp_enqueue_script('jquery');
+
+		wp_enqueue_script('lmla_mobile_script', get_template_directory_uri() . '/build/js/trunk.min.js', array('jquery'),'1.1', false);
+
+		wp_enqueue_script('lmla_mod_cust_script', get_template_directory_uri() . '/build/js/html5shiv.js', array('jquery'),'1.1', false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -29,9 +29,11 @@ a {
 .main-navigation {
 	clear: both;
 	display: block;
+	float:none;
+@include tablet {
 	float: left;
 	width: 100%;
-
+}
 	ul {
 		display: none;
 		list-style: none;

@@ -1,9 +1,9 @@
 /*!
-Theme Name: LMLA 2016 Theme
+Theme Name: LMLA2016 Theme
 Theme URI: http://underscores.me/
 Author: John Peacock
-Author URI: http://peacockdigitalmedia.com
-Description: A WordPress starter theme for Little Mountain Learning Academy.
+Author URI: http://www.peacockdigitalmedia.com
+Description: A WordPress starter theme.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-LMLA 2016 Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+LMLA2016 Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -404,6 +404,40 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+.search-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+
+.search-field {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1.2rem;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+
+.search-submit {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 0 .5rem; }
+
+.fa-search {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -423,8 +457,11 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  float: none; }
+  @media all and (min-width: 960px) {
+    .main-navigation {
+      float: left;
+      width: 100%; } }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -485,9 +522,99 @@ a {
   text-align: right;
   width: 50%; }
 
-.lmla-logo {
-  min-width: 12rem;
-  width: 100%; }
+.lmla-logo img {
+  padding: 0;
+  min-width: 14rem;
+  width: 90%; }
+  @media all and (min-width: 960px) {
+    .lmla-logo img {
+      padding: 1rem 0 0 1rem; } }
+
+@media all and (min-width: 960px) {
+  .logo-menu-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+.site-branding {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 40%;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%; }
+
+.lmla-search-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+  @media all and (min-width: 960px) {
+    .lmla-search-wrapper {
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end; } }
+
+.main-navigation li {
+  text-align: right;
+  display: inline-block; }
+  @media all and (min-width: 960px) {
+    .main-navigation li {
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end; } }
+
+.main-navigation a, nav {
+  padding-right: 1rem; }
+  .main-navigation a .main-navigation, nav .main-navigation {
+    clear: both;
+    width: 100%; }
+    @media all and (min-width: 960px) {
+      .main-navigation a .main-navigation, nav .main-navigation {
+        text-align: right;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex: 0 1 60%;
+            -ms-flex: 0 1 60%;
+                flex: 0 1 60%;
+        -webkit-flex-direction: column-reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; } }
+
+nav {
+  -webkit-flex: 1 0 60%;
+      -ms-flex: 1 0 60%;
+          flex: 1 0 60%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
+  @media all and (min-width: 960px) {
+    nav nav li {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end; } }
+
+.site-footer {
+  background-color: #CCC; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -562,6 +689,29 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.site-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.content-area {
+  -webkit-flex: 0 1 75%;
+      -ms-flex: 0 1 75%;
+          flex: 0 1 75%; }
+
+.widget-area {
+  -webkit-flex: 1 0 25%;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+  border-left: 1px solid #CCC; }
+
+.front-page-title {
+  text-align: center;
+  padding: 2rem 0 2rem 0; }
+
 /* Posts and pages */
 .sticky {
   display: block; }

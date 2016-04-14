@@ -2,6 +2,27 @@
 # Content
 --------------------------------------------------------------*/
 
+.site-content {
+	display:flex;
+	justify-content:center;
+}
+
+.content-area {
+flex:0 1 75%;
+}
+
+.widget-area {
+flex:1 0 25%;
+border-left: 1px solid #CCC;
+}
+
+//////////home page ////////////////
+
+.front-page-title {
+	text-align:center;
+	padding:2rem 0 2rem 0;
+}
+
 /* Posts and pages */
 
 .sticky {
