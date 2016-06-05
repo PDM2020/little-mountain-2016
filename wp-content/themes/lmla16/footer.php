@@ -14,20 +14,31 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
 
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'lmla16' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'lmla16' ), 'WordPress' ); ?></a>
+		<div class="contact-info">
+					<ul><span>Contact info:</span>
+						<li>Phone:604-221-2363</li>
+					</ul>
 
-			<span class="sep"> | </span>
+					<ul><span>Address:</span>
+						<li>2150 Western Parkway,</li>
+						<li>Vancouver BC V6T 1W6</li>
+					</ul>
+		</div><!-- .contact-info -->
 
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s', 'lmla16' ), 'lmla16', '<a href="http://peacockdigitalmedia.com/" rel="designer">Peacock Digital Media</a>' ); ?>
+		<div class="lang-pref">
+					<ul><span>Language Preference:</span>
+						<li>English</li>
+						<li>Chinese</li>
+					</ul>
 
-			<span class="sep"> | </span>
+					<ul><span>Admin</span>
+						<li><a href="/wp-admin/">Login</a></li>
+					</ul>
+		</div>
 
-			<?php printf( esc_html__( ' %1$s: %2$s', 'lmla16' ), 'Admin', '<a href="/wp-admin/" > Login</a>' ); ?>
-
-		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

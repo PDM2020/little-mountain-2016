@@ -28,6 +28,7 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -59,7 +60,7 @@ a:active {
 	font-weight: 400;
 	text-decoration: none;
 	line-height: 1.6em;
-	color: white;
+	color: #333;
 }
 
 .main-navigation a:hover,
@@ -100,7 +101,7 @@ a:active {
 }
 
 .main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a{
+.main-navigation .page_item_has_children > a {
 	padding-right: 48px;
 }
 
@@ -110,6 +111,7 @@ a:active {
 
 .dropdown-toggle {
 	position: absolute;
+	border:none;
 	height: 27px;
 	width: 27px;
 	top: 12px;
@@ -119,10 +121,9 @@ a:active {
 	box-sizing: content-box;
 	padding: 0;
 	font-family: 'FontAwesome';
-	background-color: #000;
-	border: 1px solid #fff;
+	background-color:transparent;
 	content: "";
-	color: #fff;
+	color: #000;
 	text-transform: lowercase; /* Stop screen readers from reading the text as capital letters */
 }
 
@@ -140,6 +141,7 @@ a:active {
 .dropdown-toggle:focus {
 	background-color: #fff;
 	color: #000;
+	outline:none;
 }
 
 .dropdown-toggle.toggle-on:after {
@@ -153,56 +155,68 @@ a:active {
 }
 
 .menu-toggle {
-	position: fixed;
-	z-index: 100;
-	bottom: 1em;
-	left: 1em;
+	position: relative;
+	z-index:200;
+	top: .7em;
 	font-size: 1em;
 	text-transform: uppercase;
-	background-color: #000;
-	color: #fff;
-	border: solid 2px #fff;
+	color: #333;
+	border: none;
 	transition: all ease-out 400ms;
+	float:right;
 }
 
-.menu-toggle.hide {
-	bottom: -2.5em;
+.menu-toggle::before {
+	margin-right:1px;
+	padding:.4em .5em ;
+	border: 1px solid #000;
+	border-radius: 50%;
+	cursor: pointer;
+	content: "\f0c9";
+	font-family: FontAwesome;
+	font-size: 12px;
+	position: relative;
+	color:#000;
+
 }
-
-/* Make sure the button doesn't hide when menu is open. */
-
-.toggled .menu-toggle.hide {
-	bottom: 1em;
-}
-
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-	text-decoration: underline;
+	text-decoration: none;
+	color:#000;
+}
+
+ul.nav-menu {
+ 	margin: 2em 0 1.5em 3em;
 }
 
 @media screen and (min-width: 50em) {
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
 		display: block;
+	}
+
+	ul.nav-menu {
+	 	margin: 3em 0 0 0;
 	}
 }
 
 /* Hovering menu */
 
 .main-navigation.toggled {
-	position: fixed;
+	position: relative;
 	bottom: 0;
-	padding: 1em;
+	// padding: 4em 1em 1em 1em;
 	z-index: 1;
 }
 
 .nav-menu {
 	padding: 1em;
-	margin-bottom: 3em;
-	background-color: #000;
+	margin-bottom: 1em;
+	background-color: #FFF;
 }
 
 .main-navigation.toggled ul {
@@ -227,15 +241,10 @@ a:active {
 	.main-navigation.toggled {
 		position: relative;
 		min-height: 3.5em;
-		max-width: 58em;
-		margin: 0 auto;
-		padding: 0 3.5em;
-		background-color: #000;
-		background-color: hsla(0, 0%, 0%, .7);
 	}
 
 	.nav-menu {
-		padding: .3em 0 0 0;
+
 		background-color: transparent;
 	}
 
@@ -243,7 +252,6 @@ a:active {
 	.main-navigation.toggled ul {
 		max-height: none;
 		padding-left: 0;
-		text-align: center;
 	}
 
 	.main-navigation.toggled ul {
@@ -276,7 +284,7 @@ a:active {
 	.main-navigation a:hover,
 	.main-navigation a:focus {
 		background: transparent;
-		color: #fff;
+		color: #000;
 		text-decoration: underline;
 		outline: solid 1px #b3b3b3;
 	}
@@ -292,11 +300,11 @@ a:active {
 	/* Position drop-down menus absolutely */
 	.main-navigation ul ul.toggled-on {
 		position: absolute;
-		width: 12em;
+		width: 100%;
 		display: block;
 		z-index: 10;
 		margin-left: 0;
-		background: #000;
+    background-color: #FFF;
 	}
 
 	.main-navigation ul ul ul.toggled-on {
@@ -319,5 +327,15 @@ a:active {
 		line-height: 27px;
 		width: 27px;
 	}
+
+}
+
+@media screen and (min-width: 60em) {
+	 .main-navigation ul {
+		 text-align:right;
+	 }
+	 ul.nav-menu {
+		 margin-top: .2em;
+	 }
 
 }

@@ -100,14 +100,15 @@ class RF_General {
    }
 
    /**
-    * Remove unnecesary sub-menu links
+    * Remove unnecesary sub-menu links (this function has been added to wp-config.php)
     *
     * @since 1.0.0
+    *
+    * public function remove_submenus() {
+    * 	remove_submenu_page( 'themes.php', 'theme-editor.php' );
+    * 	remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+    *   }
     */
-   public function remove_submenus() {
-   	remove_submenu_page( 'themes.php', 'theme-editor.php' );
-   	remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
-   }
 
    /**
     * Change post update messages to be post type-specific

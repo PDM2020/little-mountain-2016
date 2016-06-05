@@ -24,48 +24,24 @@
 <div id="page" class="site <?php echo get_theme_mod( 'layout_setting', 'no-sidebar' ); ?>">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lmla16' ); ?></a>
 
-	<?php if ( get_header_image() ) { ?>
-		<header id="masthead" class="site-header" style="background-image: url(<?php header_image(); ?>)" role="banner">
-	<?php } else { ?>
 		<header id="masthead" class="site-header" role="banner">
-	<?php } ?>
-			
-		<?php // Display site icon or first letter as logo ?>	
-		<div class="site-logo">
-			<?php $site_title = get_bloginfo( 'name' ); ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<div class="screen-reader-text">
-					<?php printf( esc_html__('Go to the home page of %1$s', 'lmla16'), $site_title ); ?>	
-				</div>
-				<?php
-				if ( has_site_icon() ) {
-					$site_icon = esc_url( get_site_icon_url( 270 ) ); ?>
-					<img class="site-icon" src="<?php echo $site_icon; ?>" alt="">
-				<?php } else { ?>
-					<div class="site-firstletter" aria-hidden="true">
-						<?php echo substr($site_title, 0, 1); ?>
-					</div>
-				<?php } ?>
-			</a>
-		</div>
-		
-		<div class="site-branding<?php if ( is_singular() ) { echo ' screen-reader-text'; } ?>">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'lmla16' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+				<div class="site-logo">
+					<?php $site_title = get_bloginfo( 'name' ); ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() ?>/images/little-mountain-logo.png"alt="Little Mountain Learning Academy logo">
+						<div class="screen-reader-text">
+							<?php printf( esc_html__('Go to the home page of %1$s', 'lmla16'), $site_title ); ?>
+						</div>
+
+					</a>
+				</div><!-- .site-logo -->
+
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'lmla16' ); ?></button>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
+
+		</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
