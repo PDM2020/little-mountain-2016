@@ -9,7 +9,7 @@
 // Register Custom Post Type
 function register_lmla_post_type() {
 
-// Coaching Custom Post Type (position 5)
+// Coaching Custom Post Type (position 6)
 	$labels = array(
 		'name'                  => 'Coaching',
 		'singular_name'         => 'Coaching',
@@ -57,39 +57,39 @@ function register_lmla_post_type() {
 		'capability_type'       => 'post',
 	);
 	register_post_type( 'coaching', $args );
-	
-	
-// Partners Custom Post Type  (position 6)
+
+
+// Classes Custom Post Type  (position 7)
 	$labels = array(
-		'name'                  => 'Partnerships',
-		'singular_name'         => 'Partner',
-		'menu_name'             => 'Partnerships',
-		'name_admin_bar'        => 'Partnerships',
-		'archives'              => 'Partnership Archives',
-		'parent_item_colon'     => 'Parent Partnerships:',
-		'all_items'             => 'All Partnerships',
-		'add_new_item'          => 'Add New Partner',
+		'name'                  => 'Classes',
+		'singular_name'         => 'Class',
+		'menu_name'             => 'Classes',
+		'name_admin_bar'        => 'Classes',
+		'archives'              => 'Class Archives',
+		'parent_item_colon'     => 'Parent Classes:',
+		'all_items'             => 'All Classes',
+		'add_new_item'          => 'Add New Class',
 		'add_new'               => 'Add New',
-		'new_item'              => 'New Partner',
-		'edit_item'             => 'Edit Partner',
-		'update_item'           => 'Update Partner',
-		'view_item'             => 'View Partner',
-		'search_items'          => 'Search Partner',
+		'new_item'              => 'New Class',
+		'edit_item'             => 'Edit Class',
+		'update_item'           => 'Update Class',
+		'view_item'             => 'View Class',
+		'search_items'          => 'Search Class',
 		'not_found'             => 'Not found',
 		'not_found_in_trash'    => 'Not found in Trash',
 		'featured_image'        => 'Featured Image',
 		'set_featured_image'    => 'Set featured image',
 		'remove_featured_image' => 'Remove featured image',
 		'use_featured_image'    => 'Use as featured image',
-		'insert_into_item'      => 'Insert into partner',
-		'uploaded_to_this_item' => 'Uploaded to this partner',
-		'items_list'            => 'Partnerships list',
-		'items_list_navigation' => 'Partners list navigation',
-		'filter_items_list'     => 'Filter partnerships list',
+		'insert_into_item'      => 'Insert into class',
+		'uploaded_to_this_item' => 'Uploaded to this class',
+		'items_list'            => 'Classes list',
+		'items_list_navigation' => 'Classes list navigation',
+		'filter_items_list'     => 'Filter classes list',
 	);
 	$args = array(
-		'label'                 => 'Partnerships',
-		'description'           => 'Community Partners for Little Mountain',
+		'label'                 => 'Classes',
+		'description'           => 'Classes for Little Mountain',
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor', 'author', 'thumbnail', 'revisions', ),
 		'hierarchical'          => false,
@@ -97,16 +97,66 @@ function register_lmla_post_type() {
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 6,
-		'menu_icon'             => 'dashicons-businessman',
+		'menu_icon'             => 'dashicons-book-alt',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => 'partnerships',
+		'has_archive'           => 'classes',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'partnerships', $args );
+	register_post_type( 'classes', $args );
+
+// Programs Custom Post Type  (position 4)
+	$labels = array(
+		'name'                  => 'Programs',
+		'singular_name'         => 'Program',
+		'menu_name'             => 'Programs',
+		'name_admin_bar'        => 'Programs',
+		'archives'              => 'Program Archives',
+		'parent_item_colon'     => 'Parent Programs:',
+		'all_items'             => 'All Programs',
+		'add_new_item'          => 'Add New Program',
+		'add_new'               => 'Add New',
+		'new_item'              => 'New Program',
+		'edit_item'             => 'Edit Program',
+		'update_item'           => 'Update Program',
+		'view_item'             => 'View Program',
+		'search_items'          => 'Search Programs',
+		'not_found'             => 'Not found',
+		'not_found_in_trash'    => 'Not found in Trash',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
+		'insert_into_item'      => 'Insert into program',
+		'uploaded_to_this_item' => 'Uploaded to this program',
+		'items_list'            => 'Programs list',
+		'items_list_navigation' => 'Programs list navigation',
+		'filter_items_list'     => 'Filter programs list',
+	);
+	$args = array(
+		'label'                 => 'Programs',
+		'description'           => 'Programs for Little Mountain',
+		'labels'                => $labels,
+		'supports'              => array('title', 'editor', 'author', 'thumbnail', 'revisions', ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 4,
+		'menu_icon'             => 'dashicons-welcome-learn-more',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => 'programs',
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+	);
+	register_post_type( 'programs', $args );
 
 }
+
 add_action( 'init', 'register_lmla_post_type', 0 );

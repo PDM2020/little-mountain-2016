@@ -47,8 +47,8 @@ add_action('login_head', 'lmla16_login_logo');
 
 // custom archive (partnerships) page title
 function lmla16_archive_title($title) {
-if (is_post_type_archive(array('partnerships'))) {
-	$title = 'Our Partnerships Are Made Fresh Daily';
+if (is_post_type_archive(array('programs'))) {
+	$title = 'Our Prgrams Are Made Fresh Daily';
 
 } elseif (is_tax('product-type')) {
    $title = single_term_title('', false);

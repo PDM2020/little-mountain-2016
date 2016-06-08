@@ -19,7 +19,6 @@
 					<ul><span>Contact info:</span>
 						<li>Phone:604-221-2363</li>
 					</ul>
-
 					<ul><span>Address:</span>
 						<li>2150 Western Parkway,</li>
 						<li>Vancouver BC V6T 1W6</li>

@@ -50,8 +50,3 @@ include_once( RF_DIR . '/lib/functions/post-types.php' );
 include_once( RF_DIR . '/lib/functions/taxonomies.php' );
 
 /**
- * Hide Default Post
- *
- * @since 1.0.0
- */
-include_once( RF_DIR . '/lib/functions/hide-default-posts.php' );

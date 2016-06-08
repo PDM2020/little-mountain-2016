@@ -4,14 +4,6 @@
 	font-size: 1.4em;
 }
 
-.page-header::after {
-	display: block;
-	content: "";
-	width: 3.5em;
-	border-bottom: 1px solid #c3c3c3;
-	margin: 2em auto;
-}
-
 .taxonomy-description {
     margin-top: 1.5em;
     border: 1px solid #c3c3c3;
@@ -65,10 +57,11 @@
 .entry-content .continue-reading a {
 	display: inline-block;
 	margin: 1em auto;
-	padding: 1em 2em;
 	font-family: "Fira Sans", sans-serif;
 	text-decoration: none;
-	border: 1px solid #c3c3c3;
+	border-bottom: double;
+	line-height: 1;
+	font-size: 1.2em;
 }
 
 .continue-reading a:hover,
@@ -81,14 +74,12 @@
 }
 
 .continue-reading a::after {
-	content: "…"
+	content: ">"
 }
 .continue-reading::after {
 	display: block;
     content: "";
     width: 7em;
-    border-bottom: 1px solid #c3c3c3;
-    margin: 4em auto 0;
 }
 
 .entry-content .continue-reading::after {

@@ -12,29 +12,29 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		
-		<?php 
+
+		<?php
 		if ( has_post_thumbnail() ) { ?>
 			<figure class="featured-image">
 				<?php if ( $first_post == true ) { ?>
 					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 						<?php the_post_thumbnail(); ?>
 					</a>
-				<?php } else { 
-					the_post_thumbnail(); 
+				<?php } else {
+					the_post_thumbnail();
 				}
 				?>
 			</figure>
 		<?php }
 		?>
-		
-		<?php 
+
+		<?php
 			if ( $first_post == true ) {
 				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 			} else {
-				the_title( '<h1 class="entry-title">', '</h1>' ); 
+				the_title( '<h1 class="entry-title">', '</h1>' );
 			}
-		
+
 		?>
 
 		<?php
@@ -44,9 +44,11 @@
 			echo '</div><!-- .deck -->';
 		}
 		?>
-		
+
 		<div class="entry-meta">
-			<?php lmla16_posted_on(); ?>
+
+	  <?php lmla16_posted_on(); ?>
+
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -64,4 +66,3 @@
 		<?php lmla16_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-
