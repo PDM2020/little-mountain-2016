@@ -1,0 +1,74 @@
+/*!
+Theme Name: LMLA2016 Theme
+Theme URI: http://underscores.me/
+Author: John Peacock
+Author URI: http://www.peacockdigitalmedia.com
+Description: A WordPress starter theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+LMLA2016 Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Fonts
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Other Navigation
+# Accessibility
+# Alignments
+# Clearings
+# Header
+# Widgets
+# Content
+	## Global
+# Indexes
+# Posts and pages
+	## Asides
+# Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Images
+	## Galleries
+# Footer
+--------------------------------------------------------------*/
+/*
+CSS included in style.css - refer to table of contents for sub content partials location.
+i.e: ## Links and ## Menus are located in the navigation partial
+*/
+@import "normalize";
+@import "typography";
+@import "fonts";
+@import "elements";
+@import "forms";
+@import "navigation";
+@import "other-navigation";
+@import "accessibility";
+@import "alignments";
+@import "clearings";
+@import "header";
+@import "widgets";
+@import "content";
+@import "indexes";
+@import "posts-pages";
+@import "comments";
+@import "infinite-scroll";
+@import "media";
+@import "footer";
