@@ -1,0 +1,88 @@
+// early literacy program
+
+
+.program-title {
+    display: table;
+    line-height: 15px;
+    margin: 1em auto;
+    text-decoration: none;
+    border-bottom: double;
+    text-align:center;
+    border-color:#333;
+    font-size:1.6em;
+}
+
+.stream-class-wrapper {
+  width:100%;
+   display:flex;
+   flex-wrap:nowrap;
+}
+
+.three-animal-image, .two-animal-image, .animal-image {
+  padding:0 3px 0 0;
+  width:60px;
+  flex:0 0 25%;
+  display:flex;
+}
+
+.three-animal-image img,.two-animal-image img, .animal-image img {
+    width:60px;
+    height:60px;
+}
+
+// .two-animal-image img:empty {
+//   display: none;
+// }
+// .three-animal-image img:empty {
+//   display: none;
+// }
+
+img[src=""] {
+    display: none;
+}
+
+.class-name {
+  font-weight: 700;
+  display:flex;
+  width:200px;
+
+}
+
+.name-description {
+  flex-wrap:wrap;
+  flex-direction: column;
+  flex:0 0 75%;
+  display:flex;
+}
+.class-description {
+  font-size: .9em;
+  display:flex;
+}
+
+.cr-float {
+  width:100px;
+  align-self: flex-end;
+}
+
+.program-courses-wrapper {
+  width:100%;
+}
+
+h3.program-sub-title {
+  margin: 1em 0;
+}
+
+.postid-59 {// fish
+      background-color: #ffff00;
+}
+
+.postid-48 {// butterfly
+      background-color: #e564d0;
+}
+
+@media screen and (min-width: 30em) {
+	.cr-float {
+		width:200px;
+    font-size:1em;
+	}
+}
