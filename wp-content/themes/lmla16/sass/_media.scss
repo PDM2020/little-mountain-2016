@@ -95,8 +95,13 @@ img.alignleft {
 
 .centered-image,
 .featured-image {
+<<<<<<< HEAD
 	max-width: calc(100% + 2.8em);
 	margin: 1.5em -1.4em;
+=======
+	// max-width: calc(100% + 2.8em);
+	// margin: 1.5em -1.4em;
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
 }
 
 @media screen and (min-width: 30em) {

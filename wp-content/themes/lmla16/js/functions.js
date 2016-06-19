@@ -1,10 +1,31 @@
 /**
+<<<<<<< HEAD
+=======
+ * this short bit of code is used to hide empty
+ * div tags on the programs page
+ */
+
+// jQuery('div').each(function(){
+//  if(jQuery(this).children().length === 0){
+// 	jQuery(this).hide();
+//  }
+// });
+
+/**
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
  * navigation.js
  *
  * Handles toggling the navigation menu for small screens and enables tab
  * support for dropdown menus.
  */
+<<<<<<< HEAD
 ( function( $ ) {
+=======
+
+
+( function( $ ) {
+
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
 	var container, button, menu, links, subMenus;
 
 	container = document.getElementById( 'site-navigation' );

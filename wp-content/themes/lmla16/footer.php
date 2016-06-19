@@ -15,6 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
+<<<<<<< HEAD
 		<div class="contact-info">
 					<ul><span>Contact info:</span>
 						<li>Phone:604-221-2363</li>
@@ -35,6 +36,11 @@
 						<li><a href="/wp-admin/">Login</a></li>
 					</ul>
 		</div>
+=======
+		<div class="site-info">
+		<?php printf( esc_html( 'Copyright &copy; 2016'),'lmla16'); ?><span>&bull;</span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( 'Little Mountain Learning Academy 2016' ), 'lmla16' ); ?></a><span>&bull;</span><a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( 'Login' ), 'lmla16' ); ?></a>
+		</div><!-- .site-info -->
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
 
 	</footer><!-- #colophon -->
 

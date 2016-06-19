@@ -56,7 +56,12 @@ i.e: ## Links and ## Menus are located in the navigation partial
 @import "normalize";
 @import "typography";
 @import "fonts";
+<<<<<<< HEAD
 @import "courses";
+=======
+@import "front-page";
+@import "programs";
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
 @import "elements";
 @import "forms";
 @import "navigation";

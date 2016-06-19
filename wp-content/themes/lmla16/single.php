@@ -22,8 +22,13 @@ get_header(); ?>
 					comments_template();
 				endif;
 			?>
+<<<<<<< HEAD
 
 			<?php
+=======
+			
+			<?php 
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
 			the_post_navigation( array(
 				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'lmla16' ) . '</span> ' .
 					'<span class="screen-reader-text">' . __( 'Next post:', 'lmla16' ) . '</span> ' .

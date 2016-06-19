@@ -42,7 +42,11 @@
 	wp.customize( 'header_color', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-header' ).css( {
+<<<<<<< HEAD
 				'background-color': to 
+=======
+				'background-color': to
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
 			});
 		} );
 	} );

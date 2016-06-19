@@ -59,7 +59,11 @@ function register_lmla_post_type() {
 	register_post_type( 'coaching', $args );
 
 
+<<<<<<< HEAD
 // Classes Custom Post Type  (position 7)
+=======
+// Courses Custom Post Type  (position 7)
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
 	$labels = array(
 		'name'                  => 'Courses',
 		'singular_name'         => 'Course',
@@ -85,7 +89,11 @@ function register_lmla_post_type() {
 		'uploaded_to_this_item' => 'Uploaded to this course',
 		'items_list'            => 'Courses list',
 		'items_list_navigation' => 'Courses list navigation',
+<<<<<<< HEAD
 		'filter_items_list'     => 'Filter Courses list',
+=======
+		'filter_items_list'     => 'Filter courses list',
+>>>>>>> f9845b96cde3763cba43b6f44eabb94302e27700
 	);
 	$args = array(
 		'label'                 => 'Courses',
