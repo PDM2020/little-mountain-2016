@@ -15,7 +15,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<section class="course-description">
+				<section class="class-description">
 
 					<div class="entry-header">
 
@@ -23,7 +23,7 @@ get_header(); ?>
 								<img src="<?php echo CFS()->get( 'animal_logo' ); ?>">
 						</div>
 
-						<?php the_title('<h2 class="course-title">', '</h2>' ); ?>
+						<?php the_title('<h2 class="class-title">', '</h2>' ); ?>
 
 						<p><?php echo CFS()->get('age_range'); ?></p>
 
