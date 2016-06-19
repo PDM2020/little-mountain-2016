@@ -113,6 +113,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+
 <?php get_footer(); ?>
 <!-- hide empty cfs images
 get_field returns false if (value == “” || value == null || value == false)
