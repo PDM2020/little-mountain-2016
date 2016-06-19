@@ -33,6 +33,8 @@ get_header(); ?>
 
 						<?php the_content(); ?>
 
+						hello
+
 					</div><!-- .entry-content -->
 				</section>
 
