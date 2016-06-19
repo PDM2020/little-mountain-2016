@@ -22,8 +22,8 @@ get_header(); ?>
 					comments_template();
 				endif;
 			?>
-			
-			<?php 
+
+			<?php
 			the_post_navigation( array(
 				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'lmla16' ) . '</span> ' .
 					'<span class="screen-reader-text">' . __( 'Next post:', 'lmla16' ) . '</span> ' .
