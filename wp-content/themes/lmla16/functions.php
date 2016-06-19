@@ -94,7 +94,7 @@ add_action( 'after_setup_theme', 'lmla16_setup' );
  * @global int $content_width
  */
 function lmla16_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'lmla16_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'lmla16_content_width', 1219 );
 }
 add_action( 'after_setup_theme', 'lmla16_content_width', 0 );
 

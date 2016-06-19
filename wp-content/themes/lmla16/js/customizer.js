@@ -42,7 +42,7 @@
 	wp.customize( 'header_color', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-header' ).css( {
-				'background-color': to 
+				'background-color': to
 			});
 		} );
 	} );

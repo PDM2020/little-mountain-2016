@@ -1,0 +1,94 @@
+//  programs overview
+
+.program-space {
+  margin-bottom:3em;
+}
+
+#post-48 {
+    background-color: #FCDFF1;
+}
+
+#post-70 {
+  background-color: #FBD5AE;
+}
+
+#post-59 {// fish
+      background-color: #FFF5C2;
+}
+
+.program-title {
+    margin: 0 auto;
+    text-decoration: none;
+    text-align:center;
+}
+
+.program-wrapper {
+   display:flex;
+   flex-direction: column;
+}
+
+.bkgd-color .post-id-48 {
+  background-color: #FCDFF1;
+}
+
+.animal-image {
+  width:130px;
+  display:flex;
+  align-self: flex-end;
+}
+
+.animal-image img {
+    width:130px;
+    height:130px;
+}
+
+img[src=""] {
+    display: none;
+}
+
+.program-overview-btn {
+  background-color: #fcdff1;
+  margin:1em 0 1em 0;
+  padding:1em .5em 1em .5em;
+  text-align:center;
+  align-self: center;
+  border-radius: 5px;
+  font-size: 1.8em;
+  font-family: 'Verdana',sans-serif;
+  line-height: 1;
+  font-weight: lighter;
+
+}
+
+.program-overview-btn a {
+  text-decoration: none;
+  font-family:sans-serif;
+}
+
+
+
+// .postid-70 {// Acaademic enrichment
+//       background-color: #FBD5AE;
+// }
+//
+// .postid-48 {// butterfly
+//       background-color: #ED198B;
+// }
+//
+// .postid- {// hare
+//       background-color: #53B949;
+// }
+// .postid- {// deer
+//       background-color: #F7941E;
+// }
+//
+// .postid-48 {// rooster
+//       background-color: #E21E38;
+// }
+
+// @media screen and (min-width: 30em) {
+// 	.program-overview-btn {
+// 		width:200px;
+//     font-size:1em;
+// 	}
+// }

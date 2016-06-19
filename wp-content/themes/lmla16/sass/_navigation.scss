@@ -155,10 +155,10 @@ a:active {
 }
 
 .menu-toggle {
-	position: relative;
+	// position: relative;
 	z-index:200;
-	top: .7em;
-	font-size: 1em;
+	// top: .7em;
+	font-size: 2em;
 	text-transform: uppercase;
 	color: #333;
 	border: none;
@@ -166,18 +166,8 @@ a:active {
 	float:right;
 }
 
-.menu-toggle::before {
-	margin-right:1px;
-	padding:.4em .5em ;
-	border: 1px solid #000;
-	border-radius: 50%;
-	cursor: pointer;
-	content: "\f0c9";
-	font-family: FontAwesome;
-	font-size: 12px;
-	position: relative;
-	color:#000;
-
+button.menu-toggle {
+	padding: 1.2em .5em 1em 0;
 }
 
 .menu-toggle:hover,
@@ -187,7 +177,7 @@ a:active {
 }
 
 ul.nav-menu {
- 	margin: 2em 0 1.5em 3em;
+ 	margin: 4em 0 1.5em 3em;
 }
 
 @media screen and (min-width: 50em) {
@@ -200,7 +190,7 @@ ul.nav-menu {
 	}
 
 	ul.nav-menu {
-	 	margin: 3em 0 0 0;
+	 	margin: 4.2em 0 0 0;
 	}
 }
 
@@ -214,7 +204,7 @@ ul.nav-menu {
 }
 
 .nav-menu {
-	padding: 1em;
+	padding: 1em 0 1em 0;
 	margin-bottom: 1em;
 	background-color: #FFF;
 }
@@ -335,7 +325,7 @@ ul.nav-menu {
 		 text-align:right;
 	 }
 	 ul.nav-menu {
-		 margin-top: .2em;
+		 margin-top: 1.2em;
 	 }
 
 }

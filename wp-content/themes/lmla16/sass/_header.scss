@@ -1,12 +1,40 @@
+.admin-bar .site-logo img {
+  padding-top: 70px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .site-logo img {
+    padding-top: 56px;
+  }
+}
 
 .site-header {
 	display:flex;
 	justify-content:space-between;
-	margin-top:1em;
 	background-color: #FFF;
 	background-size: cover;
 	min-width:320px;
 	min-height: 4.5em;
+}
+
+.student-login {
+  padding-top:2px;
+  height:2em;
+  background-color: #00ADEF;
+  width:100%;
+  position: absolute;
+  text-align:right;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid #FFF;
+  border-left: 4px solid #FFF;
+z-index:220;
+
+}
+
+.student-login a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color:#FFF;
+  margin-right: 15px;
 
 }
 
