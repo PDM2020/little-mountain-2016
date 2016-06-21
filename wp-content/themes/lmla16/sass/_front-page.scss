@@ -1,4 +1,7 @@
 
+
+// group 1 programs
+
 .group-1-course-wrapper {
   padding: 1em .25em .7em .25em;
   margin:0 auto;
@@ -9,10 +12,34 @@
   font-size:2em;
 }
 
-.group-1-programs-wrapper {
+.group-1-bkgd {
+margin-top:-2.5em;
   background:
   linear-gradient(to bottom,rgba(255,255,255,.25) 100%,rgba(255,255,255,.25) 100%),
   url("../../images/core-programs-bkgd.jpg") bottom no-repeat center;
+  background-size: cover;
+
+}
+
+.newsletter-form {
+  width: 600px;
+  margin:0 auto;
+}
+// group 2 programs
+.group-2-course-wrapper {
+  padding: 1em .25em .7em .25em;
+  margin:0 auto;
+  max-width:420px;
+}
+
+.group-2-course-wrapper h2 {
+  font-size:2em;
+}
+
+.group-2-bkgd, .newsletter-bkgd {
+margin-top:-2.5em;
+  background:
+  linear-gradient(to bottom,rgba(206,235,254,.5) 100%,rgba(206,235,254,.5) 100%);
   background-size: cover;
 
 }
@@ -62,23 +89,40 @@
 	content: " 》";
 }
 
+.video-quote {
+  text-align:center;
+  color:#666;
+}
+
+.video-link {
+  width:100%;
+  margin:0 auto;
+  padding-bottom:2em;
+  text-align:center;
+}
 
 @media screen and (min-width: 26em) {
-  .group-1-course-wrapper h2 {
-    font-size:2em;
-  }
+
   .hp-course-title {
     font-size: 1.7em;
+  }
+  .page-title h2 {
+    font-size:2em;
+    padding-top: 1em;
   }
 
 } // end 26em
 
 
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 62em) { // 992px
 
   .group-1-programs-wrapper {
     display:flex;
     justify-content: space-between;
+    background: none;
+  }
+
+  .group-1-bkgd {
     background: none;
   }
 
@@ -93,7 +137,7 @@
     padding-top: 10px;
     margin:0 auto;
     max-width:300px;
-    background:none;
+
   }
 
   .hp-course-excerpt p {
@@ -103,6 +147,23 @@
   .more-info-homepage {
     font-size:1em;
     align-self: flex-end;
+}
+
+// group 2 programs
+
+.group-2-programs-wrapper {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.group-2-course-wrapper {
+  display:flex;
+  flex-wrap: wrap;
+  flex:0 1 50%;
+  padding-top: 10px;
+  margin:0 auto;
+  width:300px;
 }
 
 } // end 62em
