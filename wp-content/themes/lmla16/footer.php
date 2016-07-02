@@ -8,7 +8,6 @@
  *
  * @package Lmla16
  */
-
 ?>
 
 	</div><!-- #content -->
@@ -32,16 +31,25 @@
 			</ul>
 		</div>
 
-		<div class="lang-pref">
-			<h2>Language Preferneces</h2>
-			<button class="ca-btn">English</button>
-			<button class="zh-han-btn">Chinese</button>
+<div class="lang-pref">
+
+			<div>
+				<h2>Language Preferneces</h2>
+			</div>
+
+				<button class="ca-btn">English</button>
+			 <button class="zh-han-btn">Chinese</button>
+			 
 		</div>
 
 </div> <!--.footer-wrapper -->
 
 		<div class="site-info">
-		<?php printf( esc_html( 'Copyright &copy;'),'lmla16'); ?> <?php _e(date('Y')); ?><span>&bull;</span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( 'Little Mountain Learning Academy 2016' ), 'lmla16' ); ?></a><span>&bull;</span><a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( 'Login' ), 'lmla16' ); ?></a>
+		<?php printf( esc_html( 'Copyright &copy;'),'lmla16'); ?> <?php _e(date('Y')); ?>
+		<span>&bull;</span>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( 'Little Mountain Learning Academy 2016' ), 'lmla16' ); ?></a>
+		<span>&bull;</span>
+		<a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( 'Login' ), 'lmla16' ); ?></a>
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->

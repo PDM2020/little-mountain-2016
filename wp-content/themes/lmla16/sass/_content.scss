@@ -2,16 +2,20 @@
 ## Global
 --------------------------------------------------------------*/
 
-
 .site-content {
 	background-color: #FFF;
+	padding-top:6.3em;
 }
+
 .content-area {
 	overflow-x: hidden;
 }
 
 /* Rules for sidebar left and sidebar right */
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 64em) {
+	.site-content {
+		padding-top: 10.1em;
+	}
 
 	/* Sidebar Right layouts */
 	.sidebar-right .content-area {
@@ -71,27 +75,13 @@
 		content: "";
 		border-bottom: 1px solid #c3c3c3;
 	}
-
-
-
 }
 
 .site-main {
-	margin: 0 auto;
+	margin: 1.2em auto 0;
 	font-size: 1em;
 	line-height: 1.6em;
-}
-
-@media screen and (min-width: 30em) {
-	.site-main {
-		// margin: 1.8em;
-	}
-}
-
-@media screen and (min-width: 40em) {
-	.site-main {
-		font-size: 1em;
-	}
+	margin-top: 1.2em;
 }
 
 @media screen and (min-width: 57em) {

@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-
+<div class="programs-header-image"><?php the_post_thumbnail( 'large' ); ?></div>
 	<div id="primary" class="content-area program-space">
 
 		<main id="main" class="site-main" role="main">
@@ -20,20 +20,15 @@ get_header(); ?>
 
 				<section class="program-courses-wrapper" >
 
-					<div class="programs-header-image"><?php the_post_thumbnail( 'large' ); ?></div>
 
 
 			<?php endif; ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-
-
 <div class="entry-header">
 					<?php the_title('<h2 class="program-title">', '</h2>' ); ?>
 				</div><!-- .entry-header -->
-
-
 
 <!-- 1st course -->
 
@@ -42,8 +37,8 @@ get_header(); ?>
 
 					<div class="program-wrapper">
 
-						<div class="program-description">
-								<?php the_content(); ?>
+						<div class="course-description">
+							<?php the_content(); ?>
 							</div>
 
 							<div class="program-overview-btn program-overview-btn-1">
@@ -62,8 +57,8 @@ get_header(); ?>
 
 					<div class="program-wrapper">
 
-						<div class="program-description">
-									<?php echo CFS()->get( '2nd_overview' ); ?>
+						<div class="course-description">
+									<p><?php echo CFS()->get( '2nd_overview' ); ?></p>
 							</div>
 
 							<div class="program-overview-btn program-overview-btn-2">
@@ -83,8 +78,8 @@ get_header(); ?>
 
 					<div class="program-wrapper">
 
-							<div class="program-description">
-									<?php echo CFS()->get( '3rd_overview' ); ?>
+							<div class="course-description">
+									<p><?php echo CFS()->get( '3rd_overview' ); ?></p>
 							</div>
 
 							<div class="program-overview-btn program-overview-btn-3">

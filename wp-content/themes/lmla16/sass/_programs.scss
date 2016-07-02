@@ -1,23 +1,27 @@
-//  programs overview
 
-.program-space {
-  margin-bottom:3em;
-}
-
-#post-48 {
-    background-color: #FCDFF1;
-}
-
-#post-70 {
-  background-color: #FBD5AE;
-}
-
-#post-59 {// fish
-      background-color: #FFF5C2;
+// early literacy program
+.programs-header-image {
+  padding: 0 0 2em;
+  max-width: 959px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .program-title {
-    margin: 0 auto;
+    display: table;
+    line-height: 15px;
+    margin: 1em auto;
+    text-decoration: none;
+    border-bottom: double;
+    text-align:center;
+    border-color:#333;
+    font-size:1.3em;
+}
+
+//  programs overview
+
+.program-title {
+    margin: .25em auto;
     text-decoration: none;
     text-align:center;
 }
@@ -27,14 +31,11 @@
    flex-direction: column;
 }
 
-.bkgd-color .post-id-48 {
-  background-color: #FCDFF1;
-}
-
 .animal-image {
   width:130px;
   display:flex;
   align-self: flex-end;
+margin: 1em 2em 2em 0;
 }
 
 .animal-image img {
@@ -46,49 +47,50 @@ img[src=""] {
     display: none;
 }
 
-.program-overview-btn {
-  background-color: #fcdff1;
-  margin:1em 0 1em 0;
-  padding:1em .5em 1em .5em;
-  text-align:center;
-  align-self: center;
-  border-radius: 5px;
-  font-size: 1.8em;
-  font-family: 'Verdana',sans-serif;
-  line-height: 1;
-  font-weight: lighter;
+.program-courses-wrapper {
+  width:100%;
+}
 
+.program-overview-btn {
+  display:inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: .8em 1.4em;
+  border-radius: 10px;
+  font-size: 1.2em;
+  max-width: 430px;
 }
 
 .program-overview-btn a {
   text-decoration: none;
-  font-family:sans-serif;
+  font-family: 'Roboto Light',sans-serif;
 }
 
+@media screen and (min-width: 50em) {
+
+.course-description {
+  max-width: 600px;
+  margin-left: auto;
+  text-align: left;
+  margin-right: auto;
+
+}
+
+.animal-image {
+align-self: center;
+margin: 1em 0 2em 0;
+}
+
+} //media querie 26em
 
 
-// .postid-70 {// Acaademic enrichment
-//       background-color: #FBD5AE;
-// }
-//
-// .postid-48 {// butterfly
-//       background-color: #ED198B;
-// }
-//
-// .postid- {// hare
-//       background-color: #53B949;
-// }
-// .postid- {// deer
-//       background-color: #F7941E;
-// }
-//
-// .postid-48 {// rooster
-//       background-color: #E21E38;
-// }
+// Academic enrichment background-color: #FBD5AE;
 
-// @media screen and (min-width: 30em) {
-// 	.program-overview-btn {
-// 		width:200px;
-//     font-size:1em;
-// 	}
-// }
+// butterfly  background-color: #ED198B;
+
+// hare  background-color: #53B949;
+
+// deer  background-color: #F7941E;
+
+// rooster  background-color: #E21E38;

@@ -78,11 +78,14 @@ function lmla16_setup() {
 		'default-image' => '',
 	) ) );
 
-	/**
-	 * Add editor styles
-	 */
-	add_editor_style( array( 'inc/editor-style.css', 'fonts/custom-fonts.css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' ) );
-}
+	/** +++ turned off +++
+	* Add editor styles
+	*
+* add_editor_style( array( 'inc/editor-style.css', 'fonts/custom-fonts.css',
+* 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' ) );
+*/
+
+	}
 endif; // lmla16_setup
 add_action( 'after_setup_theme', 'lmla16_setup' );
 
@@ -94,6 +97,7 @@ add_action( 'after_setup_theme', 'lmla16_setup' );
  * @global int $content_width
  */
 function lmla16_content_width() {
+
 	$GLOBALS['content_width'] = apply_filters( 'lmla16_content_width', 1219 );
 }
 add_action( 'after_setup_theme', 'lmla16_content_width', 0 );
@@ -158,11 +162,6 @@ function lmla16_scripts() {
 add_action( 'wp_enqueue_scripts', 'lmla16_scripts' );
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -173,11 +172,19 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+	/** +++ turned off +++
+	*  Customizer additions.
+	*
+	*/
+	 require get_template_directory() . '/inc/customizer.php';
+
+
+	/** ++ turned off ++
+	*  Implement the Custom Header feature.
+	*
+	*/
+	require get_template_directory() . '/inc/custom-header.php';

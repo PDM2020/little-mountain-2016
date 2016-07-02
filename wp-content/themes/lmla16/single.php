@@ -24,6 +24,7 @@ get_header(); ?>
 			?>
 
 			<?php
+
 			the_post_navigation( array(
 				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'lmla16' ) . '</span> ' .
 					'<span class="screen-reader-text">' . __( 'Next post:', 'lmla16' ) . '</span> ' .
@@ -37,6 +38,6 @@ get_header(); ?>
 		<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div> <!-- #primary -->
 
 <?php get_footer(); ?>

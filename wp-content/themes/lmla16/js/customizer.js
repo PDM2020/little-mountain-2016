@@ -43,6 +43,7 @@
 		value.bind( function( to ) {
 			$( '.site-header' ).css( {
 				'background-color': to
+
 			});
 		} );
 	} );

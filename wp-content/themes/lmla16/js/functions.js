@@ -1,23 +1,23 @@
-/**
- * this short bit of code is used to hide empty
- * div tags on the programs page
- */
-
-// jQuery('div').each(function(){
-//  if(jQuery(this).children().length === 0){
-// 	jQuery(this).hide();
-//  }
-// });
-
-/**
- * navigation.js
- *
- * Handles toggling the navigation menu for small screens and enables tab
- * support for dropdown menus.
- */
 
 
 ( function( $ ) {
+
+	// hide empty program-wrapper divs
+    $( '.program-wrapper' ).each(function() {
+
+      if ( '' === $.trim( $( this ).text() ) ) {
+        $( this ).remove();
+      }
+
+    });
+  // end hide empty program-wrapper divs
+
+  /**
+   * navigation.js
+   *
+   * Handles toggling the navigation menu for small screens and enables tab
+   * support for dropdown menus.
+   */
 
 	var container, button, menu, links, subMenus;
 

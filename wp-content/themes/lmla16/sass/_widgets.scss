@@ -1,5 +1,13 @@
 #secondary {
 	position: relative;
+	padding: 1.8em 1.4em 0;
+	background-color: #ededed;
+}
+
+.widget {
+	margin: 0 0 1.5em;
+	padding: 1.8em;
+	background: #fff;
 	padding: 1.8em 0;
 }
 
@@ -12,7 +20,6 @@
 .widget-title {
 	text-align:center;
 }
-
 
 @media screen and (min-width: 45em) {
 	#secondary {
@@ -43,7 +50,8 @@
 }
 
 .site-content .widget li {
-	padding: .3em 1em;
+	display: block;
+	padding: .3em 0;
 }
 
 .widget li ul,

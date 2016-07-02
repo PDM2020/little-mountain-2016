@@ -7,7 +7,9 @@
 .site-header:before,
 .site-header:after,
 .site-content:before,
-.site-content:after {
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
 	content: "";
 	display: table;
 	table-layout: fixed;
