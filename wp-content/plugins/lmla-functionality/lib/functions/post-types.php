@@ -9,37 +9,38 @@
 // Register Custom Post Type
 function register_lmla_post_type() {
 
-// Coaching Custom Post Type (position 6)
+// Student Projects Custom Post Type
 	$labels = array(
-		'name'                  => 'Coaching',
-		'singular_name'         => 'Coaching',
-		'menu_name'             => 'Coaching',
-		'name_admin_bar'        => 'Coaching',
-		'archives'              => 'Coaching Archives',
-		'parent_item_colon'     => 'Parent Coaching:',
-		'all_items'             => 'All Coaching',
-		'add_new_item'          => 'Add New Coaching',
-		'add_new'               => 'Add New',
-		'new_item'              => 'New Coaching',
-		'edit_item'             => 'Edit Coaching',
-		'update_item'           => 'Update Coaching',
-		'view_item'             => 'View Coaching',
-		'search_items'          => 'Search Coaching',
-		'not_found'             => 'Not found',
-		'not_found_in_trash'    => 'Not found in Trash',
-		'featured_image'        => 'Featured Image',
-		'set_featured_image'    => 'Set featured image',
-		'remove_featured_image' => 'Remove featured image',
-		'use_featured_image'    => 'Use as featured image',
-		'insert_into_item'      => 'Insert into coaching',
-		'uploaded_to_this_item' => 'Uploaded to this coaching',
-		'items_list'            => 'Coaching list',
-		'items_list_navigation' => 'Coaching list navigation',
-		'filter_items_list'     => 'Filter coaching list',
+		'name'                  => 'Student Projects',
+		'singular_name'         => 'Student Project',
+		'menu_name'             => 'Student Projects',
+		'name_admin_bar'        => 'Student Project',
+		'archives'              => 'Student Project Archives',
+		'parent_item_colon'     => 'Parent Student Project:',
+		'all_items'             => 'All Student Projects',
+		'add_new_item'          => 'Add New Student Project',
+		'add_new'               => 'Add New Student Project',
+		'new_item'              => 'New Student Project',
+		'edit_item'             => 'Edit Student Project',
+		'update_item'           => 'Update Student Project',
+		'view_item'             => 'View Student Project',
+		'search_items'          => 'Search Student Project',
+		'not_found'             => 'No Student Projects found',
+		'not_found_in_trash'    => 'No Student Projects found in Trash',
+		'featured_image'        => 'Student Project Image',
+		'set_featured_image'    => 'Set student project featured image',
+		'remove_featured_image' => 'Remove student project featured image',
+		'use_featured_image'    => 'Use as student project featured image',
+		'insert_into_item'      => 'Insert into student project',
+		'uploaded_to_this_item' => 'Uploaded to this student project',
+		'items_list'            => 'Student Project list',
+		'items_list_navigation' => 'Student Project list navigation',
+		'filter_items_list'     => 'Filter student project list',
+
 	);
 	$args = array(
-		'label'                 => 'Coaching',
-		'description'           => 'Coaching Sevices for Little Mountain',
+		'label'                 => 'Student Projects',
+		'description'           => 'Student Projects for Little Mountain',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'revisions', ),
 		'hierarchical'          => false,
@@ -51,14 +52,14 @@ function register_lmla_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => 'coaching',
+		'has_archive'           => 'student-projects',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'coaching', $args );
+	register_post_type( 'student-projects', $args );
 
-// Courses Custom Post Type  (position 7)
+// Courses Custom Post Type
 
 	$labels = array(
 		'name'                  => 'Courses',
@@ -97,7 +98,7 @@ function register_lmla_post_type() {
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_position'         => 6,
+		'menu_position'         => 5,
 		'menu_icon'             => 'dashicons-book-alt',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
@@ -109,7 +110,7 @@ function register_lmla_post_type() {
 	);
 	register_post_type( 'courses', $args );
 
-// Programs Custom Post Type  (position 4)
+// Programs Custom Post Type
 	$labels = array(
 		'name'                  => 'Programs',
 		'singular_name'         => 'Program',
@@ -146,7 +147,7 @@ function register_lmla_post_type() {
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_position'         => 4,
+		'menu_position'         => 5,
 		'menu_icon'             => 'dashicons-welcome-learn-more',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
@@ -157,6 +158,55 @@ function register_lmla_post_type() {
 		'capability_type'       => 'post',
 	);
 	register_post_type( 'programs', $args );
+
+	// Teachers and Staff Custom Post Type
+		$labels = array(
+			'name'                  => 'Staff',
+			'singular_name'         => 'Staff',
+			'menu_name'             => 'Staff',
+			'name_admin_bar'        => 'Staff',
+			'archives'              => 'Staff Archives',
+			'parent_item_colon'     => 'Parent Staff:',
+			'all_items'             => 'All Staff',
+			'add_new_item'          => 'Add New Staff',
+			'add_new'               => 'Add New',
+			'new_item'              => 'New Staff',
+			'edit_item'             => 'Edit Staff',
+			'update_item'           => 'Update Staff',
+			'view_item'             => 'View Staff',
+			'search_items'          => 'Search Staff',
+			'not_found'             => 'Not found',
+			'not_found_in_trash'    => 'Not found in Trash',
+			'featured_image'        => 'Biography Photo',
+			'set_featured_image'    => 'Set Biography Photo',
+			'remove_featured_image' => 'Remove biography photo',
+			'use_featured_image'    => 'Use as biography photo',
+			'insert_into_item'      => 'Insert into staff',
+			'uploaded_to_this_item' => 'Uploaded to this staff',
+			'items_list'            => 'Staff list',
+			'items_list_navigation' => 'Staff list navigation',
+			'filter_items_list'     => 'Filter staff list',
+		);
+		$args = array(
+			'label'                 => 'Staff',
+			'description'           => 'Staff for Little Mountain',
+			'labels'                => $labels,
+			'supports'              => array('title', 'editor', 'author', 'thumbnail', 'revisions', ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'             => 'dashicons-admin-users',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => 'teachers-and-staff',
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'post',
+		);
+		register_post_type( 'teachers-and-staff', $args );
 
 }
 

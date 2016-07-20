@@ -17,39 +17,60 @@
 <div class="footer-wrapper">
 
 		<div class="contact-info">
+			<?php if(ICL_LANGUAGE_CODE=='en'): ?>
 				<h2>Contact Information</h2>
-				<p>Phone: 604-221-2363<br/>
-				Address: Suite 213 - 2150 Western Parkway, Vancouver British Columbia, Canada, V6T 1W6</p>
+				<p>Phone:&nbsp;<a href="tel:604-221-2363">604-221-2363</a><br/>
+				Address: Suite 213 - 2150 Western Parkway, Vancouver British Columbia, Canada, V6T 1V6</p>
+			<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
+				<h2>联系信息</h2>
+				<p>电话:&nbsp;<a href="tel:604-221-2363">604-221-2363</a><br/>
+				地址: Suite 213 - 2150 Western Parkway, Vancouver British Columbia, Canada, V6T 1V6</p>
+			<?php endif;?>
+
 		</div>
 
 		<div class="lmla-social">
-			<h2>Follow us on social media</h2>
+
+			<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+				<h2>Follow us on social media</h2>
+			<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
+				<h2>按照我们在社交媒体</h2>
+			<?php endif;?>
+
 			<ul>
-				<li><i class="fa fa-facebook"></i></li>
-				<li><i class="fa fa-soundcloud"></i></li>
-				<li><i class="fa fa-youtube"></i></li>
+				<li><a href="https://www.facebook.com/LittleMountainLearningAcademy/"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://soundcloud.com/lmacademics"><i class="fa fa-soundcloud"></i></a></li>
+				<li><a href="https://www.youtube.com/user/LMLAmedia"><i class="fa fa-youtube"></i></a></li>
 			</ul>
 		</div>
 
-<div class="lang-pref">
+<div class="lang-pref-wrapper">
 
-			<div>
-				<h2>Language Preferneces</h2>
-			</div>
+				<div>
+				<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+					<h2>Language Preferences</h2>
+				<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
+					<h2>语言首选项</h2>
+				<?php endif;?>
+				</div>
 
-				<button class="ca-btn">English</button>
-			 <button class="zh-han-btn">Chinese</button>
-			 
-		</div>
+				<div id="footer_language_list" >
+					<?php language_selector_flags(); ?>
+				</div>
+
+</div>
 
 </div> <!--.footer-wrapper -->
 
+
+
 		<div class="site-info">
-		<?php printf( esc_html( 'Copyright &copy;'),'lmla16'); ?> <?php _e(date('Y')); ?>
-		<span>&bull;</span>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( 'Little Mountain Learning Academy 2016' ), 'lmla16' ); ?></a>
-		<span>&bull;</span>
-		<a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( 'Login' ), 'lmla16' ); ?></a>
+			<!-- -->
+			<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+				<?php printf( esc_html( 'Copyright &copy;'),'lmla16'); ?> <?php _e(date('Y')); ?>	<span>&bull;</span> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( 'Little Mountain Learning Academy' ), 'lmla16' ); ?></a> <span>&bull;</span> <a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( 'Login' ), 'lmla16' ); ?></a>
+			<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
+				<?php printf( esc_html( '版权 &copy;'),'lmla16'); ?> <?php _e(date('Y')); ?>	<span>&bull;</span> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( 'Little Mountain Learning Academy' ), 'lmla16' ); ?></a> <span>&bull;</span> <a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( '登录' ), 'lmla16' ); ?></a><?php endif;?>
+			<!-- -->
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->

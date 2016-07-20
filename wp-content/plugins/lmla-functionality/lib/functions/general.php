@@ -1,10 +1,4 @@
 <?php
-
-/**
- *new function coming soon
- *
- */
-
 /**
  * GENERAL HOUSEKEEPING
  *
@@ -25,7 +19,6 @@ class RF_General {
 
       // Admin bar and menus customization
       add_action( 'admin_menu', array( $this, 'remove_menus' ) );
-      add_action( 'admin_init', array( $this, 'remove_submenus' ), 102 );
 
       // Customize post type UI
       add_filter( 'post_updated_messages', array( $this, 'set_updated_messages' ) );
@@ -104,17 +97,6 @@ class RF_General {
    		if( in_array( $value[0] != NULL?$value[0]:"" , $restricted ) ){ unset($menu[key($menu)] ); }
    	}
    }
-
-   /**
-    * Remove unnecesary sub-menu links (this function has been added to wp-config.php)
-    *
-    * @since 1.0.0
-    *
-    * public function remove_submenus() {
-    * 	remove_submenu_page( 'themes.php', 'theme-editor.php' );
-    * 	remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
-    *   }
-    */
 
    /**
     * Change post update messages to be post type-specific

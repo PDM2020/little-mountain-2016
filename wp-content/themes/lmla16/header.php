@@ -26,25 +26,17 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<div class="student-login-link">
-				<a href="/wp-admin/">Student Login Portal</a>
-			</div>
-
-			<!-- <div class="lmla-phone">
-				<div class="cel-border"><i class="fa fa-phone"></i></div><span>Call Now: <a href="tel:555-555-1212">&nbsp;555-555-1212</a></span>
-			</div> -->
-
-			<div class="student-login-form"><span>Student Login Portal</span>
-				<form>
-            <input type="email" name="student-email" value="" placeholder="Enter Student Email" />
-						<input type="password" name="student-password" value="" placeholder="Enter Student Password" />
-            <input type="submit" name="student-login" value="Login" />
-					</form>
+			<div class="lmla-phone-wrapper">
+				<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+					<span>Call Now: <a href="tel:604-221-2363">604-221-2363</a></span>
+				<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
+				<span>现在打电话: <a href="tel:604-221-2363">604-221-2363</a></span>
+				<?php endif;?>
 			</div>
 
 			<div class="site-logo">
 				<?php $site_title = get_bloginfo( 'name' ); ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() ?>/images/little-mountain-logo.png"alt="Little Mountain Learning Academy Logo">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() ?>/images/little-mountain-logo.png"width="235px" height="157" alt="Little Mountain Learning Academy Logo" />
 
 					<div class="screen-reader-text">
 						<?php printf( esc_html__('Go to the home page of %1$s', 'lmla16'), $site_title ); ?>
@@ -60,4 +52,4 @@
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
-				<?php putRevSlider('homepage', 'homepage'); ?>
+			<?php putRevSlider('homepage', 'homepage'); ?>

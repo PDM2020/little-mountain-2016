@@ -15,63 +15,26 @@
 }
 
 // student link under 1024px
-.student-login-link {
+.lmla-phone-wrapper {
   padding-top:4px;
   height:2em;
   background-color: #00ADEF;
   width:100%;
   position: absolute;
-  text-align:right;
-}
-
-.student-login-link a {
-  text-decoration: none;
+  text-align:center;
   color:#FFF;
-  margin-right: 1em;
-  font-family: 'Roboto Light',sans-serif;
-  font-weight: 200;
+  a {
+    text-decoration: none;
+    color:#FFF;
+    font-family: 'Roboto Light',sans-serif;
+    font-weight: 200;
+  }
 }
 
-.student-login-form {
+@media screen and (min-width: 32em) {
+.lmla-phone-wrapper span {
   display:none;
-}
-
-// call now link
-
-.lmla-phone span {
-  display:none;
-  justify-content: center;
-  margin:4px 0 0 0;
-  height:2em;
-}
-
-.lmla-phone {
-  padding-left:1em;
-  width:100%;
-  display: flex;
-  font-size:1em;
-  position: relative;
-}
-
-.lmla-phone a {
-  display: flex;
-  text-decoration:none;
-  font-size:1em;
-  color: #000;
-}
-
-.cel-border {
-  width:25px;
-  height:25px;
-  margin: 4px .25em 0 0;
-  border: 1px solid #000;
-  border-radius: 100%;
-
-}
-
-i.fa.fa-phone {
-  margin:0 0 1em .275em;
-
+  }
 }
 
 // stop the admin bar from scrolling on small screens
@@ -81,60 +44,14 @@ i.fa.fa-phone {
   }
 }
 
-
 // student form over 1024px
 @media screen and (min-width: 64em) {
-  .student-login-form {
-    display:flex;
-    justify-content: flex-end;
-    padding-top:3px;
-    height:2em;
-    background-color: #00ADEF;
-    min-width:100%;
-    color:#666;
-    position:absolute;
 
+  .site-header {
+    max-width:80em;
   }
 
-  .student-login-form span {
-    display:flex;
-    color:#FFF;
-    font-family: 'Roboto Light',sans-serif;
-    font-weight: 200;
-  }
-
-  .student-login-form form {
-    display:flex;
-  }
-
-  .student-login-form input[type="email"],
-  .student-login-form input[type="password"] {
-    display:flex;
-    height:1.7em;
-    margin:1px .25em .325em .5em;
-    font-size:.9em;
-    border-radius: 0;
-    box-shadow: none;
-    border:0;
-    width:200px;
-  }
-
-  .student-login-form input[type="submit"]  {
-     display:flex;
-     margin:0 .5em .325em .5em;
-     border:none;
-     background-color: #FEDB32;
-     height:1.6em;
-     border-radius: 6px;
-     font-size:1em;
-     padding: .25em 1em .25em 1em;
-}
-
-  .student-login-link {
-    display:none;
-  }
-
-}
+} // end of 64 em media query
 
 .site-logo {
   display:flex;

@@ -47,13 +47,13 @@ a:active {
 
 .main-navigation ul ul {
 	display: none;
-	margin-left: 0.8em;
+	margin-left: 2em;//changed from .8en
 }
 
 .main-navigation a {
 	position: relative;
 	display: block;
-	padding: 0.8em 1em;
+	padding: 0.8em .5em;
 	font-family: 'Fira Sans', sans-serif;
 	font-weight: 500;
 	font-size: 1.2em;
@@ -102,7 +102,11 @@ a:active {
 
 .main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
-	padding-right: 48px;
+	padding-right: 38px; //distance between nav items and chevron
+}
+
+.main-navigation a {
+	padding-left:0;
 }
 
 .no-js .main-navigation ul ul {
@@ -115,7 +119,7 @@ a:active {
 	height: 27px;
 	width: 27px;
 	top: 12px;
-	right: 6px;
+	right: 2em;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
@@ -142,6 +146,7 @@ a:active {
 	background-color: #fff;
 	color: #000;
 	outline:none;
+		transition: all ease-out 400ms;
 }
 
 .dropdown-toggle.toggle-on:after {
@@ -172,7 +177,8 @@ a:active {
 }
 
 ul.nav-menu {
- 	margin: 6em 0 1.5em 3em;
+ 	margin: 6em 0 3.5em 3em;
+
 }
 
 /* Hovering menu */
@@ -187,6 +193,7 @@ ul.nav-menu {
 	padding: 1em 0 1em 0;
 	margin-bottom: 1em;
 	background-color: #FFF;
+
 }
 
 .main-navigation.toggled ul {
@@ -203,14 +210,31 @@ ul.nav-menu {
 	display: block;
 }
 
+@media screen and (min-width: 48em) {
+
+	ul.nav-menu {
+	 	margin: 6em 0 3.5em 20em;
+		transition: all ease-out 400ms;
+	}
+
+}
+
+
 /* Horizontal menu on wide screens */
 @media screen and (min-width: 64em) {
+	.site-header {
+		height: 9.5em;
+	}
 
+	.main-navigation a {
+		padding: 0.8em .5em;
+}
 	/* Position the menu in the header */
 	.main-navigation,
 	.main-navigation.toggled {
 		position: relative;
 		min-height: 6em;
+		left:.5em; //new
 	}
 	.main-navigation a {
 		font-size:.98em;
@@ -234,6 +258,10 @@ ul.nav-menu {
 
 	.main-navigation.toggled ul {
 		overflow-y: visible;
+	}
+
+	.dropdown-toggle:after {
+		font-size: 12px;
 	}
 
 	/* Display the menu items in a horizontal order */
@@ -278,10 +306,10 @@ ul.nav-menu {
 	/* Position drop-down menus absolutely */
 	.main-navigation ul ul.toggled-on {
 		position: absolute;
-		width: 100%;
+		width: 170px;
 		display: block;
 		z-index: 10;
-		margin-left: 0;
+		margin-left: .5em;
     background-color: #FFF;
 	}
 
@@ -316,7 +344,24 @@ ul.nav-menu {
 	}
 
 	ul.nav-menu {
-	 	margin: 6em 0 0 0;
+	 	margin: 5.5em 0 0 0;
 
 	}
+}
+
+@media screen and (min-width: 80em) {
+	.dropdown-toggle:after {
+		font-size: 14px;
+	}
+	ul.nav-menu {
+	 	margin: 4em 0 0 0;
+		font-size:1.2em;
+		line-height:0;
+		}
+		.dropdown-toggle {
+			top: 16px;
+			right: 12px;
+			border: none;
+		}
+
 }

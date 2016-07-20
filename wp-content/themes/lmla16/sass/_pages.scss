@@ -1,0 +1,53 @@
+// DEV SITE
+
+.page-id-179 .entry-title, .page-id-182 .entry-title {
+  display: none;
+}
+
+.page-id-184 .entry-title, .page-id-187 .entry-title {
+  font-size: 1.5em;
+}
+
+// // STAGING SITE
+//
+// .page-id-9 .entry-title, .page-id-224 .entry-title {
+//   display: none;
+// }
+//
+// .page-id-227 .entry-title, .page-id-238 .entry-title {
+//   font-size: 1.5em;
+// }
+
+.entry-title {
+  text-align: center;
+}
+
+.additional-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+
+.text-wrapper {
+  margin: 1em 0.6em;
+}
+
+.text-wrapper-special {
+  margin: 1em 0.6em;
+  padding-top: 1em;
+}
+
+.partner-link-btn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .8em 1.4em;
+  border-radius: 10px;
+  font-size: 1em;
+  max-width: 430px;
+  text-decoration: none;
+}
+
+.partner-link-btn a {
+  text-decoration: none;
+}

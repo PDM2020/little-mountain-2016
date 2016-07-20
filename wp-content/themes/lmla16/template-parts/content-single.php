@@ -10,60 +10,23 @@
 ?>
 <?php global $first_post; ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-
-		<?php
-		if ( has_post_thumbnail() ) { ?>
-			<figure class="featured-image">
-				<?php if ( $first_post == true ) { ?>
-					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+<div class="blog-wrapper-single">
+<article id="post-<?php the_ID(); ?>">
+			<div class="blog-image">
+				<?php
+				if ( has_post_thumbnail() ) { ?>
 						<?php the_post_thumbnail(); ?>
-					</a>
-				<?php } else {
-					the_post_thumbnail();
-				}
-				?>
-			</figure>
-		<?php }
-		?>
+				<?php } ?>
+			</div>
 
-		<?php
-			if ( $first_post == true ) {
-				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-			} else {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			}
+				<div class="blog-title">
+						<?php the_title('<h2>', '</h2>' ); ?>
+				</div>
+			<div class="blog-content">
 
-		?>
-
-		<?php
-		if ( has_excerpt( $post->ID ) ) {
-			echo '<div class="deck">';
-			echo '<p>' . get_the_excerpt() . '</p>';
-			echo '</div><!-- .deck -->';
-		}
-		?>
-
-		<div class="entry-meta">
-
-	  <?php lmla16_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lmla16' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php lmla16_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+					<div class="blog-excerpt">
+						<?php the_content(); ?>
+					</div>
+			</div>
 </article><!-- #post-## -->
+</div><!-- blog-wrapper-->

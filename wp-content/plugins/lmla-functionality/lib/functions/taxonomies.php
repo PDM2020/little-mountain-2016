@@ -6,29 +6,29 @@
  */
 
 // Register Custom Taxonomy
-function register_dance_type_taxonomy() {
+function register_lmla_type_taxonomy() {
 
 	$labels = array(
-		'name'                       => 'Instructors City',
-		'singular_name'              => 'Instructor City',
-		'menu_name'                  => 'Instructor City',
-		'all_items'                  => 'All Instructor Cities',
-		'parent_item'                => 'Parent Instructor City',
-		'parent_item_colon'          => 'Parent Instructor City:',
-		'new_item_name'              => 'New Instructor City',
-		'add_new_item'               => 'Add Instructor City',
-		'edit_item'                  => 'Edit Instructor City',
-		'update_item'                => 'Update Instructor City',
+		'name'                       => 'Staff Type',
+		'singular_name'              => 'Staff Type',
+		'menu_name'                  => 'Staff Type',
+		'all_items'                  => 'All Staff Types',
+		'parent_item'                => 'Parent Staff Type',
+		'parent_item_colon'          => 'Parent Staff Type:',
+		'new_item_name'              => 'New Staff Type',
+		'add_new_item'               => 'Add Staff Type',
+		'edit_item'                  => 'Edit Staff Type',
+		'update_item'                => 'Update Staff Type',
 		'view_item'                  => 'View Instructor City',
-		'separate_items_with_commas' => 'Separate instructors with commas',
-		'add_or_remove_items'        => 'Add or remove instructor city',
+		'separate_items_with_commas' => 'Separate staff with commas',
+		'add_or_remove_items'        => 'Add or remove staff',
 		'choose_from_most_used'      => 'Choose from the most used',
-		'popular_items'              => 'Popular Instructor Cities',
-		'search_items'               => 'Search Instructor Cities',
+		'popular_items'              => 'Popular Staff',
+		'search_items'               => 'Search Staff',
 		'not_found'                  => 'Not Found',
-		'no_terms'                   => 'No instructor cities',
-		'items_list'                 => 'Instructor cities list',
-		'items_list_navigation'      => 'Instructor cities list navigation',
+		'no_terms'                   => 'No staff',
+		'items_list'                 => 'staff type list',
+		'items_list_navigation'      => 'staff list navigation',
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -39,40 +39,7 @@ function register_dance_type_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'instructor-city', array( 'instructors' ), $args );
-
-	$labels = array(
-		'name'                       => 'Class Types',
-		'singular_name'              => 'Class Type',
-		'menu_name'                  => 'Class Type',
-		'all_items'                  => 'All Class Types',
-		'parent_item'                => 'Parent Class Type',
-		'parent_item_colon'          => 'Parent Class Type:',
-		'new_item_name'              => 'New Class Type Name',
-		'add_new_item'               => 'Add New Class Type',
-		'edit_item'                  => 'Edit Class Type',
-		'update_item'                => 'Update Class Type',
-		'view_item'                  => 'View Class Type',
-		'separate_items_with_commas' => 'Separate class types with commas',
-		'add_or_remove_items'        => 'Add or remove class types',
-		'choose_from_most_used'      => 'Choose from the most used',
-		'popular_items'              => 'Popular Class Types',
-		'search_items'               => 'Search Class Types',
-		'not_found'                  => 'Not Found',
-		'no_terms'                   => 'No class types',
-		'items_list'                 => 'Class types list',
-		'items_list_navigation'      => 'Class types list navigation',
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => true,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'class-type', array( 'classes' ), $args );
+	register_taxonomy( 'staff-type', array( 'teachers-and-staff' ), $args );
 
 }
-add_action( 'init', 'register_dance_type_taxonomy', 0 );
+add_action( 'init', 'register_lmla_type_taxonomy', 0 );

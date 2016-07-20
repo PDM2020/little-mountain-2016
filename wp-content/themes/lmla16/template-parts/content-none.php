@@ -10,9 +10,10 @@
 ?>
 
 <section class="<?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
+	<div class="search-wrapper">
 	<header class="page-header">
-		<h1 class="page-title">
-			<?php 
+		<h2 class="page-title">
+			<?php
 			if ( is_404() ) { esc_html_e( 'Page not available', 'lmla16' );
 			} else if ( is_search() ) {
 				/* translators: %s = search query */
@@ -21,7 +22,7 @@
 				esc_html_e( 'Nothing Found', 'lmla16' );
 			}
 			?>
-		</h1>
+		</h2>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -33,12 +34,12 @@
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'lmla16' ); ?></p>
 			<?php get_search_form(); ?>
-		
+
 		<?php elseif ( is_404() ) : ?>
 
 			<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'lmla16' ); ?></p>
 			<?php get_search_form(); ?>
-			
+
 		<?php else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lmla16' ); ?></p>
@@ -46,27 +47,18 @@
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
-	
-	<?php
-    if ( is_404() || is_search() ) {
-    ?>
-		<h1 class="page-title secondary-title"><?php esc_html_e( 'Most recent posts:', 'lmla16' ); ?></h1>
-		<?php
-		// Get the 6 latest posts
-		$args = array(
-			'posts_per_page' => 6
-		);
-		$latest_posts_query = new WP_Query( $args );
-		// The Loop
-		if ( $latest_posts_query->have_posts() ) {
-				while ( $latest_posts_query->have_posts() ) {
-					$latest_posts_query->the_post();
-					// Get the standard index page content
-					get_template_part( 'template-parts/content', get_post_format() );
-				}
-		}
-		/* Restore original Post Data */
-		wp_reset_postdata();
-	} // endif	
-	?>
+
+
+		<h2 class="page-title secondary-title"><?php esc_html_e( 'Little Mountain Learning Academy', 'lmla16' ); ?></h2>
+
+		<ul class="animal-image-404">
+			<li class="animal-image-b"><img src="/wp-content/uploads/butterfly.png"alt="Little Mountain Learning Academy Butterfly" /></li>
+			<li class="animal-image-b"><img src="/wp-content/uploads/fish.png"alt="Little Mountain Learning Academy Fish" /></li>
+			<li class="animal-image-b"><img src="/wp-content/uploads/rabit.png"alt="Little Mountain Learning Academy Hare" /></li>
+			<li class="animal-image-b"><img src="/wp-content/uploads/deer.png"alt="Little Mountain Learning Academy Deer" /></li>
+			<li class="animal-image-b"><img src="/wp-content/uploads/rooster.png"alt="Little Mountain Learning Academy Rooster" /></li>
+		</ul>
+
+
+</div>
 </section><!-- .no-results -->

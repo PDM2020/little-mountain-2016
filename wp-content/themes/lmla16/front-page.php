@@ -134,7 +134,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-							<?php echo CFS()->get( 'gr2_course1_excerpt' ); ?>
+							<p><?php echo CFS()->get( 'gr2_course1_excerpt' ); ?></p>
 						</div>
 
 						<div class="more-info-homepage">
@@ -156,7 +156,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-							<?php echo CFS()->get( 'gr2_course2_excerpt' ); ?>
+							<p><?php echo CFS()->get( 'gr2_course2_excerpt' ); ?></p>
 						</div>
 
 						<div class="more-info-homepage">
@@ -178,7 +178,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-							<?php echo CFS()->get( 'gr2_course3_excerpt' ); ?>
+							<p><?php echo CFS()->get( 'gr2_course3_excerpt' ); ?></p>
 						</div>
 
 						<div class="more-info-homepage">
@@ -200,7 +200,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-							<?php echo CFS()->get( 'gr2_course4_excerpt' ); ?>
+							<p><?php echo CFS()->get( 'gr2_course4_excerpt' ); ?></p>
 						</div>
 
 						<div class="more-info-homepage">
@@ -334,9 +334,9 @@ get_header(); ?>
 
 									<!-- Display the Post Excerpt -->
 									<div class="hp-course-excerpt">
-										<?php
+										<p><?php
 										the_excerpt();
-										?>
+										?></p>
 									</div>
 
 									<div class="more-info-homepage">

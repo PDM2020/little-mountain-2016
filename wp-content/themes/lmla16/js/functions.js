@@ -2,15 +2,15 @@
 
 ( function( $ ) {
 
-	// hide empty program-wrapper divs
-    $( '.program-wrapper' ).each(function() {
+	// hide empty custom fields content divs
+    $( '.lmla-hidden,h1,h2,h3' ).each(function() {
 
       if ( '' === $.trim( $( this ).text() ) ) {
         $( this ).remove();
       }
-
     });
-  // end hide empty program-wrapper divs
+
+  // end hide empty custom fields content divs
 
   /**
    * navigation.js

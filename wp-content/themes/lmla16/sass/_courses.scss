@@ -2,8 +2,626 @@ img[src=""] {
     display: none;
 }
 
+//BACKGROUND COLOURS DEV SITE
+
+// Butterfly
+
+.postid-125 .section-wrapper-description, .postid-125 .section-wrapper-teachers, .postid-125 .section-wrapper-assessment {
+  background: #FDDFF1;
+}
+
+// Hare
+
+.postid-160 .section-wrapper-description, .postid-160 .section-wrapper-teachers, .postid-160 .section-wrapper-assessment {
+  background: #BFE5BA;
+}
+
+// Fish
+
+.postid-162 .section-wrapper-description, .postid-162 .section-wrapper-teachers, .postid-162 .section-wrapper-assessment {
+  background: #FFF6BF;
+}
+
+// Deer
+
+.postid-164 .section-wrapper-description, .postid-164 .section-wrapper-teachers, .postid-164 .section-wrapper-assessment {
+  background: #F3DBC6;
+}
+
+// Rooster
+
+.postid-166 .section-wrapper-description, .postid-166 .section-wrapper-teachers, .postid-166 .section-wrapper-assessment {
+  background: #F8C6CD;
+}
+
+// Accent Reduction
+
+.postid-156 .section-wrapper-teachers {
+  background: #FFFACD;
+}
+
+// University Prep
+
+.postid-158 .section-wrapper-teachers {
+  background: #FFFACD;
+}
+
+// Innovators Program
+
+.postid-169 .section-wrapper-teachers {
+  background: #FFFACD;
+}
+
+//Math Program
+
+.postid-171 .section-wrapper-teachers {
+  background: #FFFACD;
+}
+
+// BACKGROUND COLOURS STAGING SITE //
+
+// // Butterfly
+//
+// .postid-162 .section-wrapper-description, .postid-162 .section-wrapper-teachers, .postid-162 .section-wrapper-assessment {
+//   background: #FDDFF1;
+// }
+//
+// // Hare
+//
+// .postid-170 .section-wrapper-description, .postid-170 .section-wrapper-teachers, .postid-170 .section-wrapper-assessment {
+//   background: #BFE5BA;
+// }
+//
+// // Fish
+//
+// .postid-177 .section-wrapper-description, .postid-177 .section-wrapper-teachers, .postid-177 .section-wrapper-assessment {
+//   background: #FFF6BF;
+// }
+//
+// // Deer
+//
+// .postid-179 .section-wrapper-description, .postid-179 .section-wrapper-teachers, .postid-179 .section-wrapper-assessment {
+//   background: #F3DBC6;
+// }
+//
+// // Rooster
+//
+// .postid-181 .section-wrapper-description, .postid-181 .section-wrapper-teachers, .postid-181 .section-wrapper-assessment {
+//   background: #F8C6CD;
+// }
+//
+// // Accent Reduction
+//
+// .postid-183 .section-wrapper-teachers {
+//   background: #FFFACD;
+// }
+//
+// // University Prep
+//
+// .postid-189 .section-wrapper-teachers {
+//   background: #FFFACD;
+// }
+//
+// // Innovators Program
+//
+// .postid-191 .section-wrapper-teachers {
+//   background: #FFFACD;
+// }
+//
+// //Math Program
+//
+// .postid-193 .section-wrapper-teachers {
+//   background: #FFFACD;
+// }
+
+// HEADING //
+
 .course-overview-wrapper {
   width: 100%;
 }
 
-.class-wrapper {}
+.courses-header-image {
+  text-align: center;
+}
+
+.single-courses .entry-header {
+  display: flex;
+  justify-content: center;
+}
+
+//Dev Site
+.postid-156 .course-title, .postid-158 .course-title, .postid-169 .course-title, .postid-171 .course-title, .postid-173 .course-title, .postid-175 .course-title {
+  padding: 20px 0;
+}
+
+//Staging Site
+// .postid-183 .course-title, .postid-189 .course-title, .postid-191 .course-title, .postid-193 .course-title, .postid-195 .course-title, .postid-197 .course-title {
+//   padding: 20px 0;
+// }
+
+.animal-logo img{
+  width: 4em;
+  height: 4em;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.5em;
+}
+
+.section-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.3em 0;
+  padding: 0.4em 0;
+  text-align: center;
+}
+
+.course-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.age-range {
+  font-size: 1.1em;
+  margin:0;
+}
+
+.section-wrapper {
+  margin:0 auto;
+}
+
+.course-description {
+  margin: 0 0.6em;
+  padding-bottom: 1em;
+
+  p {
+    margin: 0.2em 0;
+  }
+}
+
+// SPECIAL EXTRA CONTENT for FISH section //
+
+.special-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-wrapper-additional {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.additional-block {
+  width: 100%;
+}
+
+.courses-header-image-additional {
+  width: 100%;
+  margin: 0;
+  padding-top: 1em;
+}
+
+.additional-info-wrapper {
+  width: 100%;
+}
+
+// OBJECTIVES //
+
+.objectives ul {
+  margin: 0.3em 0.5em;
+  padding-left: 1em;
+}
+
+.section-subhead {
+  text-align: center;
+  margin: 0;
+}
+
+.up-titles {
+  text-align: center;
+}
+
+//Dev site
+
+.postid-158 .objectives {
+  width: 33%;
+
+.postid-189 .objectives {
+  width: 33%;
+}
+
+}
+
+// TEACHERS //
+
+.section-title-teacher {
+  margin-bottom: 0;
+  padding-top: 0.6em;
+  text-align: center;
+}
+
+.single-teacher {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.teacher-profile-pic {
+  border-radius: 50%;
+  overflow: hidden;
+  line-height: 0;
+  width: 200px;
+  height: 200px;
+
+  a {
+    display: inline-block;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.teacher-name {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+// PROJECTS //
+
+.project-title {
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  text-decoration: underline;
+}
+
+.projects-description {
+  margin: 0 0.6em;
+  padding-bottom: 1em;
+
+  p {
+    margin: 0.2em 0;
+  }
+}
+
+.single-project-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-link-btn, .download-link-btn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .8em 1.4em;
+  border-radius: 10px;
+  font-size: 1em;
+  max-width: 430px;
+  text-decoration: none;
+}
+
+.project-link-btn a, .download-link-btn a {
+  text-decoration: none;
+}
+
+.section-wrapper-form {
+  display: flex;
+  flex-direction: column;
+}
+
+// ASSESSMENT //
+
+.section-wrapper-assessment {
+  padding-bottom: 1.5em;
+}
+
+.assessment-video {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
+
+.assessment-description {
+  padding-bottom: 1em;
+  margin: 0 0.6em;
+
+  p {
+    margin: 0.2em 0;
+  }
+}
+
+// ASSESSMENT FORM //
+
+.request-form {
+  border: 2px solid grey;
+  margin: 0 1em;
+  padding: 0.5em;
+}
+
+.gform_title {
+  border-bottom: double;
+  text-align: center;
+}
+
+.gfield_required {
+  display: none;
+}
+
+.gfield_label {
+  font-weight: normal !important;
+  font-size: 80% !important;
+}
+
+.gform_body input {
+  border-radius: 5px !important;
+}
+
+.gform_footer {
+  display: flex;
+  justify-content: center;
+}
+
+.gform_footer input {
+  color: #ffffff;
+  background: #EC008C;
+  border: transparent;
+  border-radius: 5px;
+  max-width: 150px;
+}
+
+@media (min-width: 768px) {
+
+  .request-form {
+    padding: .5em 0 .5em 1em;
+  }
+
+
+
+  // BACKGROUND COLOURS Dev site //
+
+  // Butterfly
+  .postid-125 .section-wrapper-description, .postid-125 .section-wrapper-teachers, .postid-125 .section-wrapper-assessment {
+    background: #ffffff;
+  }
+
+  .postid-125 .section-wrapper-objectives, .postid-125 .section-wrapper-assessment {
+    background: #FDDFF1;
+  }
+
+  // Hare
+  .postid-160 .section-wrapper-description, .postid-160 .section-wrapper-teachers, .postid-160 .section-wrapper-assessment {
+    background: #ffffff;
+  }
+
+  .postid-160 .section-wrapper-objectives, .postid-160 .section-wrapper-assessment {
+    background: #BFE5BA;
+  }
+
+  // Fish
+  .postid-162 .section-wrapper-description, .postid-162 .section-wrapper-teachers, .postid-162 .section-wrapper-assessment {
+    background: #ffffff;
+  }
+
+  .postid-162 .section-wrapper-objectives, .postid-162 .section-wrapper-assessment {
+    background: #FFF6BF;
+  }
+
+  // Deer
+  .postid-164 .section-wrapper-description, .postid-164 .section-wrapper-teachers, .postid-164 .section-wrapper-assessment {
+    background: #ffffff;
+  }
+
+  .postid-164 .section-wrapper-objectives, .postid-164 .section-wrapper-assessment {
+    background: #F3DBC6;
+  }
+
+  // Rooster
+  .postid-166 .section-wrapper-description, .postid-166 .section-wrapper-teachers, .postid-166 .section-wrapper-assessment {
+    background: #ffffff;
+  }
+
+  .postid-166 .section-wrapper-objectives, .postid-166 .section-wrapper-assessment {
+    background: #F8C6CD;
+  }
+
+  // Accent Reduction
+
+  .postid-156 .section-wrapper-teachers {
+    background: #ffffff;
+  }
+
+  .postid-156 .section-wrapper-objectives, .postid-156 .section-wrapper-assessment {
+    background: #FFFACD;
+  }
+
+  // University Prep
+
+  .postid-158 .section-wrapper-teachers {
+    background: #ffffff;
+  }
+
+  .postid-158 .section-wrapper-assessment {
+    background: #FFFACD;
+  }
+
+  // Math Program
+
+  .postid-171 .section-wrapper-teachers {
+    background: #ffffff;
+  }
+
+  .postid-171 .section-wrapper-assessment {
+    background: #FFFACD;
+  }
+
+  // Spring and Summer Intensive
+
+  .postid-173 .section-wrapper-assessment {
+    background: #FFFACD;
+  }
+
+  .postid-175 .section-wrapper-assessment {
+    background: #FFFACD;
+  }
+
+  // BACKGROUND COLOURS staging site
+
+  // // Butterfly
+  // .postid-162 .section-wrapper-description, .postid-162 .section-wrapper-teachers, .postid-162 .section-wrapper-assessment {
+  //   background: #ffffff;
+  // }
+  //
+  // .postid-162 .section-wrapper-objectives, .postid-162 .section-wrapper-assessment {
+  //   background: #FDDFF1;
+  // }
+  //
+  // // Hare
+  // .postid-170 .section-wrapper-description, .postid-170 .section-wrapper-teachers, .postid-170 .section-wrapper-assessment {
+  //   background: #ffffff;
+  // }
+  //
+  // .postid-170 .section-wrapper-objectives, .postid-170 .section-wrapper-assessment {
+  //   background: #BFE5BA;
+  // }
+  //
+  // // Fish
+  // .postid-177 .section-wrapper-description, .postid-177 .section-wrapper-teachers, .postid-177 .section-wrapper-assessment {
+  //   background: #ffffff;
+  // }
+  //
+  // .postid-177 .section-wrapper-objectives, .postid-177 .section-wrapper-assessment {
+  //   background: #FFF6BF;
+  // }
+  //
+  // // Deer
+  // .postid-179 .section-wrapper-description, .postid-179 .section-wrapper-teachers, .postid-179 .section-wrapper-assessment {
+  //   background: #ffffff;
+  // }
+  //
+  // .postid-179 .section-wrapper-objectives, .postid-179 .section-wrapper-assessment {
+  //   background: #F3DBC6;
+  // }
+  //
+  // // Rooster
+  // .postid-181 .section-wrapper-description, .postid-181 .section-wrapper-teachers, .postid-181 .section-wrapper-assessment {
+  //   background: #ffffff;
+  // }
+  //
+  // .postid-181 .section-wrapper-objectives, .postid-181 .section-wrapper-assessment {
+  //   background: #F8C6CD;
+  // }
+  //
+  // // Accent Reduction
+  //
+  // .postid-183 .section-wrapper-teachers {
+  //   background: #ffffff;
+  // }
+  //
+  // .postid-183 .section-wrapper-objectives, .postid-183 .section-wrapper-assessment {
+  //   background: #FFFACD;
+  // }
+  //
+  // // University Prep
+  //
+  // .postid-189 .section-wrapper-teachers {
+  //   background: #ffffff;
+  // }
+  //
+  // .postid-189 .section-wrapper-assessment {
+  //   background: #FFFACD;
+  // }
+  //
+  // // Math Program
+  //
+  // .postid-193 .section-wrapper-teachers {
+  //   background: #ffffff;
+  // }
+  //
+  // .postid-193 .section-wrapper-assessment {
+  //   background: #FFFACD;
+  // }
+  //
+  // // Spring and Summer Intensive
+  //
+  // .postid-195 .section-wrapper-assessment {
+  //   background: #FFFACD;
+  // }
+  //
+  // .postid-197 .section-wrapper-assessment {
+  //   background: #FFFACD;
+  // }
+
+//Additional Info Fish Course //
+
+.courses-header-image-additional {
+  width: 48%;
+  margin: 0;
+  display: inline-block;
+}
+
+.additional-info-wrapper {
+  width: 48%;
+  display: inline-block;
+}
+
+
+  // OBJECTIVES //
+
+  .objectives-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1em;
+  }
+
+  .objective-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .objectives {
+    width: 50%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  // TEACHERS //
+
+  .teachers-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-subhead {
+    display: none;
+  }
+
+  .single-teacher {
+    padding: 2em;
+  }
+
+  // PROJECTS //
+
+  .section-wrapper-projects {
+    padding-bottom: 1.5em;
+  }
+
+  .project-image {
+    margin: 0 auto;
+    padding-bottom: 1em;
+
+  }
+}

@@ -17,14 +17,23 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+				<div class="page-title">
+						<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+							<h1>LMLA Education Blog</h1>
+						<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
+							<h2>LMLA Education Blog(CH)</h2>
+						<?php endif;?>
+				</div>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+				<div>
+					<h1 class="blog-title screen-reader-text"><?php single_post_title(); ?></h1>
 
+				</div>
+			<?php endif; ?>
+<ul class="blog-wrapper-outer">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -39,10 +48,11 @@ get_header(); ?>
 					if ( $first_post == true ) {
 						get_template_part( 'template-parts/content', 'single' );
 					} else {
-						get_template_part( 'template-parts/content', get_post_format() );
+						get_template_part( 'template-parts/content-main', get_post_format() );
 					}
 
 				?>
+
 
 			<?php endwhile; ?>
 
@@ -53,9 +63,8 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-
+</ul> <!-- blog-wrapper-outer-->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

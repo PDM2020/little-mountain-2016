@@ -35,7 +35,7 @@
   width:130px;
   display:flex;
   align-self: flex-end;
-margin: 1em 2em 2em 0;
+  margin: 1em 2em 0 0;
 }
 
 .animal-image img {
@@ -45,6 +45,25 @@ margin: 1em 2em 2em 0;
 
 img[src=""] {
     display: none;
+}
+
+.animal-image-row {
+  margin: 1em;
+  display:flex;
+  justify-content: space-between;
+}
+
+.animal-image-404 {
+  margin: 1em;
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+
+}
+
+ .animal-image-b {
+  width:130px;
+  display:flex;
 }
 
 .program-courses-wrapper {
@@ -67,7 +86,24 @@ img[src=""] {
   font-family: 'Roboto Light',sans-serif;
 }
 
-@media screen and (min-width: 50em) {
+// programs background color wrapper
+.post-48 {
+  background-color:#FCDFF1; //literacy program
+}
+
+.post-59 {
+  background-color:#FFF5C2; //esl program
+}
+
+.post-70 {
+  background-color:#FBD5AE; //enrichment program
+}
+
+@media screen and (min-width: 56em) {
+
+  .post-48, .post-59, .post-70 {
+    background-color:#FFF;
+  }
 
 .course-description {
   max-width: 600px;
@@ -83,14 +119,3 @@ margin: 1em 0 2em 0;
 }
 
 } //media querie 26em
-
-
-// Academic enrichment background-color: #FBD5AE;
-
-// butterfly  background-color: #ED198B;
-
-// hare  background-color: #53B949;
-
-// deer  background-color: #F7941E;
-
-// rooster  background-color: #E21E38;

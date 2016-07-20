@@ -5,7 +5,26 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package Lmla16
- */
+ *
+* Adds language selector to footer
+*/
+
+	function language_selector_flags(){
+		 if (function_exists('icl_get_languages')) {
+				 $languages = icl_get_languages('skip_missing=0&orderby=code&order=desc');
+				 $langs = '';
+				 echo '<div class="lang-pref"><ul>';
+						 if(!empty($languages)){
+								 foreach($languages as $l){
+										 $class = $l['active'] ? ' class="active"' : NULL;
+										 $langs .=  '<li><a' . $class . ' href="'.$l['url'].'">' . strtoupper ($l['native_name']). '</a></li>';
+								 }
+								 $langs = substr($langs,0,-3);
+								 echo $langs;
+						 }
+				 echo '</ul></div>';
+		 }
+	}
 
 /**
  * Adds custom classes to the array of body classes.
@@ -44,16 +63,24 @@ function lmla16_login_logo() {
 }
 add_action('login_head', 'lmla16_login_logo');
 
+// include custom post types and pages in search
+function lmla16_filter_search($query) {
+    if ($query->is_search) {
+	$query->set('post_type', array('post', 'pages', 'student-projects', 'courses', 'programs'));
+    };
+    return $query;
+};
+add_filter('pre_get_posts', 'lmla16_filter_search');
 
-// custom archive (partnerships) page title
-function lmla16_archive_title($title) {
-if (is_post_type_archive(array('programs'))) {
-	$title = 'Our Prgrams Are Made Fresh Daily';
+//custom archive student projects page title
+function lmla16_sp_archive_title($title) {
+if (is_post_type_archive(array('student-projects'))) {
+	$title = 'Student Projects';
 
-} elseif (is_tax('product-type')) {
+} elseif (is_tax('student-projects-type')) {
    $title = single_term_title('', false);
+
 }
 return $title;
 }
-
-add_filter('get_the_archive_title', 'lmla16_archive_title');
+add_filter('get_the_archive_title', 'lmla16_sp_archive_title');

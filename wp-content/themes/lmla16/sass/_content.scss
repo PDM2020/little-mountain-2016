@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
+#page p {
+	padding:0 .5em 0 .5em
+}
 
 .site-content {
 	background-color: #FFF;
@@ -15,6 +18,14 @@
 @media screen and (min-width: 64em) {
 	.site-content {
 		padding-top: 10.1em;
+	}
+
+	#page {
+		max-width: 80em;
+		margin: auto;
+	}
+	#page p {
+		padding:0 1em 0 1em
 	}
 
 	/* Sidebar Right layouts */
@@ -82,6 +93,25 @@
 	font-size: 1em;
 	line-height: 1.6em;
 	margin-top: 1.2em;
+}
+
+
+.center-search-form span {
+  text-align:center;
+}
+
+.search-wrapper {
+  position:relative;
+  max-width:900px;
+  display:flex;
+  flex-direction:column;
+  padding: .5em .5em 2em .5em;
+  margin: .5em;
+  text-align: center;
+  border: 1px solid #000;
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
 }
 
 @media screen and (min-width: 57em) {

@@ -11,28 +11,55 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<div><?php the_title( '<h2 class="entry-title lmla-hidden">', '</h2>' ); ?></div>
 
 		<?php
 		if ( has_post_thumbnail() ) { ?>
-			<figure class="featured-image">
+			<div class="featured-image">
 				<?php the_post_thumbnail(); ?>
-			</figure>
+			</div>
 		<?php }
 		?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-
+	<div class="text-wrapper-special">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lmla16' ),
-				'after'  => '</div>',
-			) );
-		?>
+
 	</div><!-- .entry-content -->
+
+	<section class="additional-content lmla-hidden">
+		<h2 class="section-title"><?php echo CFS()->get('mission_title_one'); ?></h2>
+
+
+		<div class="text-wrapper"><?php echo CFS()->get('mission_text_one'); ?></div>
+
+		<style> .partner-link-btn a {color: <?php echo CFS()->get('partner_text_color'); ?>;} </style>
+		<style> .partner-link-btn {background: <?php echo CFS()->get('partner_link_color'); ?>;} </style>
+		<div class="partner-link-btn"><?php echo CFS()->get('partner_link_one'); ?></div>
+	</section>
+
+	<section class="additional-content lmla-hidden">
+		<h2 class="section-title"><?php echo CFS()->get('mission_title_two'); ?></h2>
+
+		<img src="<?php echo CFS()->get('mission_image_one'); ?>"/>
+
+		<div class="text-wrapper"><?php echo CFS()->get('mission_text_two'); ?></div>
+
+		<style> .partner-link-btn a {color: <?php echo CFS()->get('partner_text_color_two'); ?>;} </style>
+		<style> .partner-link-btn {background: <?php echo CFS()->get('partner_link_color_two'); ?>;} </style>
+		<div class="partner-link-btn"><?php echo CFS()->get('partner_link_two'); ?></div>
+
+	</section>
+
+	<section class="additional-content lmla-hidden">
+		<h2 class="section-title"><?php echo CFS()->get('partnerships_title'); ?></h2>
+
+		<div class="text-wrapper"><?php echo CFS()->get('partnerships_text'); ?></div>
+
+		<div><?php echo CFS()->get('partnerships_form'); ?></div>
+	</section>
 
 	<footer class="entry-footer">
 		<?php

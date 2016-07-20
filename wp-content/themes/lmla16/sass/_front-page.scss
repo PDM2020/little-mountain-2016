@@ -1,3 +1,8 @@
+.lmla-partner-form {
+  margin: 0 1em;
+  padding: 0.5em;
+}
+
 .hp-course-excerpt p {
   margin:0 .5em 0 .5em;
 }
@@ -8,7 +13,7 @@
 .hp-blog-wrapper {
   padding: 1em .25em .7em .25em;
   margin:0 auto;
-  width:80%;
+
 }
 
 .hp-blog-post ul {
@@ -41,8 +46,7 @@
 }
 
 .newsletter-form {
-  max-width: 600px;
-  margin:0 auto;
+  margin:0 3em;
 }
 
 .video-3-bkgd, .group-2-bkgd, .newsletter-bkgd {
@@ -82,7 +86,7 @@
   font-size:1.2em;
   font-weight:200;
   text-align:right;
-  margin: .75em 2em 0 0;
+  margin: .75em 2em 1em 0;
 }
 
 .more-info-homepage a {
@@ -105,10 +109,42 @@
   display:inline-block;
   background-color: #00ADEF;
   text-align: center;
-  padding: .8em 1.4em;
+  padding: .5em 1em;
   border-radius: 10px;
   font-size: 1.2em;
 }
+
+.gform_wrapper #gform_submit_button_20, //contact - done
+.gform_wrapper #gform_submit_button_22, //newsletter - done
+.gform_wrapper #gform_submit_button_32, //career - done
+.gform_wrapper #gform_submit_button_36, //summer intensive - done
+.gform_wrapper #gform_submit_button_33, //spring intensive - done
+.gform_wrapper #gform_submit_button_35, //accent reduction - done
+.gform_wrapper #gform_submit_button_39, //partnerships - done
+.gform_wrapper #gform_submit_button_34, // math - done
+.gform_wrapper #gform_submit_button_38, //innovators - done
+.gform_wrapper #gform_submit_button_37, //univercity prep - done
+.gform_wrapper #gform_submit_button_40, //butterfly-program - done
+.gform_wrapper #gform_submit_button_41, //hare-course - done
+.gform_wrapper #gform_submit_button_42 //rooster course - done
+.gform_wrapper #gform_submit_button_43 //fish course - done
+.gform_wrapper #gform_submit_button_44 //deer course - done
+{
+  font-family: 'Roboto Light',sans-serif;
+  display:inline-block;
+  background-color: #00ADEF;
+  text-align: center;
+  padding: .5em 1em;
+  border-radius: 5px;
+  font-size: 1.2em;
+  border:none;
+  color:#fff;
+}
+
+.gform_wrapper #gform_submit_button_38 {
+  background-color: #F58E31;
+}
+
 
 .topic-button a {
   text-decoration: none;
@@ -139,14 +175,14 @@
 
 @media screen and (min-width: 20em) {
 
-h2 {
-  font-size:1.5em;
-}
-.topic-button {
-  font-size:1em;
-}
-}
+    h2 {
+      font-size:1.3em;
+    }
+    .topic-button {
+      font-size:1em;
+    }
 
+}
 
 @media screen and (min-width: 26em) {
 
@@ -169,44 +205,46 @@ h2 {
   .group-1-programs-wrapper {
     display:flex;
     padding:0 0 2em 0;
-}
+    }
 
   .group-course-wrapper {
     padding-top: 10px;
     flex-direction: column;
     align-items: flex-start;
-  }
+    }
 
   .hp-course-title {
     font-size: 1.2em;
-  }
+    }
 
   .more-info-homepage {
     font-size:1em;
     align-self: flex-end;
-  }
+    }
 
   // group 2 programs
 
   .group-2-programs-wrapper {
     display:flex;
     flex-wrap:wrap;
-  }
+    margin: 0 1em;
+    }
 
   .hp-blog-wrapper {
     display: flex;
-  }
+    }
 
   .hp-blog-post {
     display: flex;
     flex: 1 0 50%;
     padding-bottom: 1em;
-  }
+    }
 
   .hp-blog-post ul {
     display: flex;
     flex: 0 0 50%;
-    padding: 0 1em 0 1em;
-  }
+    padding: 0 1em 0 0;
+    }
 
-} // end 64em
+}
+// end 64em

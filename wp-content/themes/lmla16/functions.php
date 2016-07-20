@@ -161,10 +161,53 @@ function lmla16_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lmla16_scripts' );
 
+
+//gravity forms overlay and close overlay function
+add_filter( 'gform_confirmation', 'lmla_custom_confirmation', 10, 4 );
+function lmla_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
+	add_filter( 'wp_footer', 'lmla_overlay');
+	return '<div id="gform-notification">' . $confirmation . '<a id="lmla-close-btn" onClick="window.location.href=window.location.href"><i class="fa fa-times" aria-hidden="true"></i></a></div>';
+}
+// onclick="history.back(-3)"
+
+
+function lmla_overlay() {
+	echo '<div id="lmla-overlay"></div>';
+	echo '
+		<script type="text/javascript">
+		jQuery("body").addClass("message-sent");
+			jQuery("#gform-notification a").click(function() {
+				jQuery("#lmla-overlay,#gform-notification").fadeOut("normal", function() {
+					jQuery(this).remove();
+				});
+			});
+		</script>
+	';
+}
+
+
+
+//re-order the staff categories
+function lmla_order_category( $query ) {
+	// exit out if it's the admin or it isn't the main query
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+	// order category archives by title in ascending order
+	if ( is_category() ) {
+		$query->set( 'order' , 'desc' );
+		$query->set( 'orderby', 'title');
+		return;
+	}
+}
+add_action( 'pre_get_posts', 'lmla_order_category', 1 );
+
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+
+ require get_template_directory() . '/inc/template-tags.php';
+
 
 /**
  * Custom functions that act independently of the theme templates.
@@ -179,12 +222,14 @@ require get_template_directory() . '/inc/jetpack.php';
 	/** +++ turned off +++
 	*  Customizer additions.
 	*
+	* require get_template_directory() . '/inc/customizer.php';
 	*/
-	 require get_template_directory() . '/inc/customizer.php';
+
 
 
 	/** ++ turned off ++
 	*  Implement the Custom Header feature.
 	*
+	* require get_template_directory() . '/inc/custom-header.php';
+	*
 	*/
-	require get_template_directory() . '/inc/custom-header.php';

@@ -1,3 +1,70 @@
+#lmla-overlay {
+	background: #000;
+	background: rgba(0, 0, 0, 0.7);
+	display: block;
+	float: left;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1099;
+}
+
+#gform-notification {
+	background: #fff;
+	border-radius: 6px;
+	display: block;
+	margin: auto;
+	max-height: 290px;
+	max-width: 290px;
+	padding: 5px;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	text-align: center;
+	width: 100%;
+	z-index: 1101;
+}
+
+#lmla-close-btn .fa-times {
+	position: absolute;
+	top: -24px;
+	right: -24px;
+  cursor: pointer;
+  border-radius: 56px;
+  color: #fff;
+	width: 28px;
+	height:28px;
+  border: solid #FFF 2px;
+	font-family: 'FontAwesome';
+	content: "";
+	outline : none;
+	font-size:24px;
+
+}
+
+
+@media screen and (min-width: 40em) {
+
+	#lmla-close-btn .fa-times {
+		position: absolute;
+		top: -24px;
+	  right: -24px;
+	}
+
+
+#gform-notification {
+	margin: auto;
+	max-height: 600px;
+	max-width: 600px;
+	padding: 10px;
+
+
+	}
+
+}
+
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -12,6 +79,30 @@ input[type="submit"] {
 	font-size: 0.75rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
+	outline : none;
+}
+
+//search only
+input[type="submit"] {
+		margin:1em auto 1em auto;
+	  font-family: 'Roboto Light',sans-serif;
+	  width:100px;
+	  background-color: #00ADEF;
+	  text-align: center;
+	  padding: .5em 1em;
+	  border-radius: 5px;
+		border:none;
+	  font-size: 1em;
+		box-shadow:none;
+    text-decoration: none;
+    color:#FFF;
+		outline : none;
+	  }
+
+
+.search-field input[type="search"]{
+	padding:1em;
+	outline : none;
 }
 
 button:hover,
@@ -20,6 +111,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #000;
 	color: #fff;
+	outline : none;
 }
 
 button:focus,
@@ -32,6 +124,7 @@ input[type="reset"]:active,
 input[type="submit"]:active {
 	border-color: #000;
 	color: #fff;
+	outline : none;
 }
 
 input[type="text"],
@@ -43,6 +136,7 @@ textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+	outline : none;
 }
 
 input[type="text"]:focus,
@@ -52,6 +146,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	color: #111;
+	outline : none;
 }
 
 input[type="text"],
@@ -60,9 +155,12 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
 	padding: 3px;
+	font-size:1.1em;
+	outline : none;
 }
 
 textarea {
 	padding-left: 3px;
 	width: 100%;
+	outline : none;
 }
