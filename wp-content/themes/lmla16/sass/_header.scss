@@ -1,12 +1,9 @@
 
-// .admin-bar .site-logo img {
-//   padding-top: 70px;
-// }
-
 .site-header {
   position:fixed;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
 	background-color: #FFF;
 	min-width:320px;
 	min-height: 7em;
@@ -14,14 +11,26 @@
   z-index:1000;
 }
 
-// student link under 1024px
+span strong {
+  display:none;
+}
+
+@media screen and (min-width: 360px) {
+  span strong {
+    display:inline;
+  }
+}
+
+// phone number under 1024px
 .lmla-phone-wrapper {
-  padding-top:4px;
+  display: flex;
+  justify-content: space-between;
+  padding:4px 0 0 1em;;
   height:2em;
   background-color: #00ADEF;
   width:100%;
-  position: absolute;
-  text-align:center;
+  z-index:1200;
+
   color:#FFF;
   a {
     text-decoration: none;
@@ -31,45 +40,118 @@
   }
 }
 
-@media screen and (min-width: 32em) {
-.lmla-phone-wrapper span {
-  display:none;
+.lmla-phone {
+    color:#FFF;
+    a {
+      color:#FFF;
+    }
   }
+
+  //lang preferences
+  #language_list_header ul {
+    list-style: none;
+  	display:flex;
+    margin:0;
+    padding:0;
+  }
+
+.lang-pref-header li {
+    text-align:center;
+    border:none;
+  	font-size:1em;
+  	margin: 0 auto ;
+  }
+
+.lang-pref-header li:first-child {
+			border-right: solid 1px #FFF;
+      padding-right:.5em;
+		}
+
+.lang-pref-header li:last-child {
+      padding-right:7px;
+      width:53px;
+		}
+
+  //end lang preferences
+
+.no-js .menu-toggle {
+	display: none;
 }
 
-// stop the admin bar from scrolling on small screens
-@media screen and (max-width: 783px) {
-  html #wpadminbar {
-    position:fixed;
-  }
+.menu-toggle:focus {
+	outline: 0;
 }
 
-// student form over 1024px
-@media screen and (min-width: 64em) {
-
-  .site-header {
-    max-width:80em;
-  }
-
-} // end of 64 em media query
+html #wpadminbar {
+  position:fixed;
+}
 
 .site-logo {
   display:flex;
   z-index:1000;
+
 }
 
 .site-logo img {
 	padding-top:2em;
-	max-width:200px;
+	max-width:230px;
 }
 
 .site-logo a {
 	position: absolute;
-	top: 1em;
-	left: 1em;
+	top: .75em;
+	left: .75em;
 	display: block;
 	width: 12em;
 	height: 3.4em;
 	color: white;
 	text-decoration: none;
 }
+
+// stop the admin bar from scrolling on small screens
+@media screen and (min-width: 783px) {
+
+  // phone number under 32em
+  .lmla-phone-wrapper {
+    display: flex;
+
+    padding-top:4px;
+    height:2em;
+    background-color: #00ADEF;
+    width:100%;
+    text-align:center;
+    }
+
+  .lmla-phone {
+    margin-top:2.6em;
+    margin-left: auto;
+    font-size:1.2em;
+    color:#000;
+    margin-right:3.5em;
+    a {
+      color:#000;
+    }
+  }
+
+  .site-logo img {
+  	padding-top:2em;
+  	max-width:260px;
+  }
+
+}
+
+// student form over 1024px
+@media screen and (min-width: 64em) {
+
+  .lmla-phone {
+    margin-left:auto;
+    margin-right:-5.9em;
+
+    }
+
+
+  .site-header {
+    max-width:80em;
+  }
+
+} // end of 64 em media query

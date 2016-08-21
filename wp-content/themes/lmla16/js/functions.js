@@ -2,7 +2,28 @@
 
 ( function( $ ) {
 
-	// hide empty custom fields content divs
+// turn scrolling off streetview map until map is clicked turn off on mouseoleave
+  var onMapMouseleaveHandler = function (event) {
+    var that = $(this);
+
+    that.on('click', onMapClickHandler);
+    that.off('mouseleave', onMapMouseleaveHandler);
+    that.find('iframe').css("pointer-events", "none");
+  };
+
+  var onMapClickHandler = function (event) {
+    var that = $(this);
+    that.off('click', onMapClickHandler);
+    that.find('iframe').css("pointer-events", "auto");
+
+    that.on('mouseleave', onMapMouseleaveHandler);
+  };
+
+  $('.maps.embed-container').on('click', onMapClickHandler);
+
+
+// hide empty custom fields content divs
+
     $( '.lmla-hidden,h1,h2,h3' ).each(function() {
 
       if ( '' === $.trim( $( this ).text() ) ) {
@@ -10,145 +31,134 @@
       }
     });
 
-  // end hide empty custom fields content divs
+// twentysixteen navigation
+// Handles toggling the navigation menu for small screens and enables tab support for dropdown menus.
+   var body, masthead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
 
-  /**
-   * navigation.js
-   *
-   * Handles toggling the navigation menu for small screens and enables tab
-   * support for dropdown menus.
-   */
+ 	function initMainNavigation( container ) {
 
-	var container, button, menu, links, subMenus;
+ 		// Add dropdown toggle that displays child menu items.
+ 		var dropdownToggle = $( '<button />', {
+ 			'class': 'dropdown-toggle',
+ 			'aria-expanded': false
+ 		} ).append( $( '<span />', {
+ 			'class': 'screen-reader-text',
+ 			text: screenReaderText.expand
+ 		} ) );
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
-		return;
-	}
+ 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
+ 		// Toggle buttons and submenu items with active children menu items.
+ 		container.find( '.current-menu-ancestor > button' ).addClass( 'toggled-on' );
+ 		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+ 		// Add menu items with submenus to aria-haspopup="true".
+ 		container.find( '.menu-item-has-children' ).attr( 'aria-haspopup', 'true' );
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
+ 		container.find( '.dropdown-toggle' ).click( function( e ) {
+ 			var _this            = $( this ),
+ 				screenReaderSpan = _this.find( '.screen-reader-text' );
 
-	menu.setAttribute( 'aria-expanded', 'false' );
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += ' nav-menu';
-	}
+ 			e.preventDefault();
+ 			_this.toggleClass( 'toggled-on' );
+ 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
-		}
-	};
+ 			// jscs:disable
+ 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+ 			// jscs:enable
+ 			screenReaderSpan.text( screenReaderSpan.text() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
+ 		} );
+ 	}
+ 	initMainNavigation( $( '.main-navigation' ) );
 
-	// Get all the link elements within the menu.
-	links    = menu.getElementsByTagName( 'a' );
-	subMenus = menu.getElementsByTagName( 'ul' );
+ 	masthead         = $( '#masthead' );
+ 	menuToggle       = masthead.find( '#menu-toggle' );
+ 	siteHeaderMenu   = masthead.find( '#site-header-menu' );
+ 	siteNavigation   = masthead.find( '#site-navigation' );
 
-	// Set menu items with submenus to aria-haspopup="true".
-	for ( var i = 0, len = subMenus.length; i < len; i++ ) {
-		subMenus[i].parentNode.setAttribute( 'aria-haspopup', 'true' );
-	}
 
-	// Each time a menu link is focused or blurred, toggle focus.
-	for ( i = 0, len = links.length; i < len; i++ ) {
-		links[i].addEventListener( 'focus', toggleFocus, true );
-		links[i].addEventListener( 'blur', toggleFocus, true );
-	}
+ 	// Enable menuToggle.
+ 	( function() {
 
-	/**
-	 * Sets or removes .focus class on an element.
-	 */
-	function toggleFocus() {
-		var self = this;
+ 		// Return early if menuToggle is missing.
+ 		if ( ! menuToggle.length ) {
+ 			return;
+ 		}
 
-		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+ 		// Add an initial values for the attribute.
+ 		menuToggle.add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', 'false' );
 
-			// On li elements toggle the class .focus.
-			if ( 'li' === self.tagName.toLowerCase() ) {
-				if ( -1 !== self.className.indexOf( 'focus' ) ) {
-					self.className = self.className.replace( ' focus', '' );
-				} else {
-					self.className += ' focus';
-				}
-			}
+ 		menuToggle.on( 'click.twentysixteen', function() {
+ 			$( this ).add( siteHeaderMenu ).toggleClass( 'toggled-on' );
 
-			self = self.parentElement;
-		}
-	}
+ 			// jscs:disable
+ 			$( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded', $( this ).add( siteNavigation ).add( socialNavigation ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+ 			// jscs:enable
+ 		} );
+ 	} )();
 
-	function initMainNavigation( container ) {
-		// Add dropdown toggle that display child menu items.
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
+ 	// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
+ 	( function() {
+ 		if ( ! siteNavigation.length || ! siteNavigation.children().length ) {
+ 			return;
+ 		}
 
-		// Toggle buttons and submenu items with active children menu items.
-		container.find( '.current-menu-ancestor > button' ).addClass( 'toggle-on' );
-		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+ 		// Toggle `focus` class to allow submenu access on tablets.
+ 		function toggleFocusClassTouchScreen() {
+ 			if ( window.innerWidth >= 910 ) {
+ 				$( document.body ).on( 'touchstart.twentysixteen', function( e ) {
+ 					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
+ 						$( '.main-navigation li' ).removeClass( 'focus' );
+ 					}
+ 				} );
+ 				siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.twentysixteen', function( e ) {
+ 					var el = $( this ).parent( 'li' );
 
-		container.find( '.dropdown-toggle' ).click( function( e ) {
-			var _this = $( this );
-			e.preventDefault();
-			_this.toggleClass( 'toggle-on' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
-			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
-		} );
-	}
-	initMainNavigation( $( '.main-navigation' ) );
+ 					if ( ! el.hasClass( 'focus' ) ) {
+ 						e.preventDefault();
+ 						el.toggleClass( 'focus' );
+ 						el.siblings( '.focus' ).removeClass( 'focus' );
+ 					}
+ 				} );
+ 			} else {
+ 				siteNavigation.find( '.menu-item-has-children > a' ).unbind( 'touchstart.twentysixteen' );
+ 			}
+ 		}
 
-	// Re-initialize the main navigation when it is updated, persisting any existing submenu expanded states.
-	$( document ).on( 'customize-preview-menu-refreshed', function( e, params ) {
-		if ( 'primary' === params.wpNavMenuArgs.theme_location ) {
-			initMainNavigation( params.newContainer );
+ 		if ( 'ontouchstart' in window ) {
+ 			$( window ).on( 'resize.twentysixteen', toggleFocusClassTouchScreen );
+ 			toggleFocusClassTouchScreen();
+ 		}
 
-			// Re-sync expanded states from oldContainer.
-			params.oldContainer.find( '.dropdown-toggle.toggle-on' ).each(function() {
-				var containerId = $( this ).parent().prop( 'id' );
-				$( params.newContainer ).find( '#' + containerId + ' > .dropdown-toggle' ).triggerHandler( 'click' );
-			});
-		}
-	});
+ 		siteNavigation.find( 'a' ).on( 'focus.twentysixteen blur.twentysixteen', function() {
+ 			$( this ).parents( '.menu-item' ).toggleClass( 'focus' );
+ 		} );
+ 	} )();
 
-	// Hide/show toggle button on scroll
+ 	// Add the default ARIA attributes for the menu toggle and the navigations.
+ 	function onResizeARIA() {
+ 		if ( window.innerWidth < 910 ) {
+ 			if ( menuToggle.hasClass( 'toggled-on' ) ) {
+ 				menuToggle.attr( 'aria-expanded', 'true' );
+ 			} else {
+ 				menuToggle.attr( 'aria-expanded', 'false' );
+ 			}
 
-	var position, direction, previous;
+ 			if ( siteHeaderMenu.hasClass( 'toggled-on' ) ) {
+ 				siteNavigation.attr( 'aria-expanded', 'true' );
+ 				socialNavigation.attr( 'aria-expanded', 'true' );
+ 			} else {
+ 				siteNavigation.attr( 'aria-expanded', 'false' );
+ 				socialNavigation.attr( 'aria-expanded', 'false' );
+ 			}
 
-	$(window).scroll(function(){
-		if( $(this).scrollTop() >= position ){
-			direction = 'down';
-			if(direction !== previous){
-				$('.menu-toggle').addClass('hide');
-
-				previous = direction;
-			}
-		} else {
-			direction = 'up';
-			if(direction !== previous){
-				$('.menu-toggle').removeClass('hide');
-
-				previous = direction;
-			}
-		}
-		position = $(this).scrollTop();
-	});
-
-	// Wrap centered images in a new figure element
-	$( 'img.aligncenter' ).wrap( '<figure class="centered-image"></figure>');
+ 			menuToggle.attr( 'aria-controls', 'site-navigation social-navigation' );
+ 		} else {
+ 			menuToggle.removeAttr( 'aria-expanded' );
+ 			siteNavigation.removeAttr( 'aria-expanded' );
+ 			socialNavigation.removeAttr( 'aria-expanded' );
+ 			menuToggle.removeAttr( 'aria-controls' );
+ 		}
+ 	}
 
 } )( jQuery );

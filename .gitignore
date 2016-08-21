@@ -41,12 +41,12 @@ wp-content/themes/lmla16/gulpfile.js
 !wp-content/
 !README.md
 
-# Ignore everything in "wp-content" except the "plugins", "themes", and "uploads" directories. #
+# Ignore everything in "wp-content" except the "plugins", "themes", and "uploads - commented out " directories. #
 # ============================================================================================ #
 wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
-!wp-content/uploads/
+# !wp-content/uploads/ #
 
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #

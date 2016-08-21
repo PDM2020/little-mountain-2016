@@ -21,7 +21,7 @@ get_header(); ?>
 						<?php if(ICL_LANGUAGE_CODE=='en'): ?>
 							<h1>LMLA Education Blog</h1>
 						<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
-							<h2>LMLA Education Blog(CH)</h2>
+							<h1>LMLA博客</h1>
 						<?php endif;?>
 				</div>
 

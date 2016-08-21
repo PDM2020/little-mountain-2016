@@ -15,18 +15,20 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="programs-header-image"><?php the_post_thumbnail( 'large' ); ?></div>
 
-					<?php if ( has_post_thumbnail() ) : ?>
+				<?php if ( has_post_thumbnail() ) : ?>
+				<div class="programs-header-image">
+					<?php the_post_thumbnail(); ?>
+				</div>
+				<?php endif; ?>
+
 
 				<section class="program-courses-wrapper" >
-
-			<?php endif; ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 <div class="entry-header">
-					<?php the_title('<h2 class="program-title">', '</h2>' ); ?>
+					<?php the_title('<h1 class="program-title">', '</h1>' ); ?>
 				</div><!-- .entry-header -->
 
 <!-- 1st course -->

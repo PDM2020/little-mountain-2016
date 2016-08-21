@@ -29,6 +29,8 @@
 	text-decoration: none;
 	padding: 1em;
 	border: 1px solid #c3c3c3;
+	background-color: #f58e31;
+    color: #FFF;
 }
 
 .comment-navigation a:hover,
@@ -96,8 +98,10 @@
 }
 
 .paging-navigation {
-	margin-top: -2em;
 	text-align: center;
+	margin-right: auto;
+  margin-left: auto;
+	width:100%;
 }
 
 .paging-navigation ul {

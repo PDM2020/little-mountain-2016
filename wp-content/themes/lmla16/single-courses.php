@@ -16,9 +16,11 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php if ( has_post_thumbnail() ) : ?>
-				<div class="courses-header-image"><?php the_post_thumbnail( 'large' ); ?></div>
-			<?php endif; ?>
+
+			<div class="courses-header-image">
+
+				<?php echo CFS()->get('featured_image_video'); ?>
+			</div>
 
 			<section class="section-wrapper-description">
 				<div class="entry-header">
@@ -153,14 +155,14 @@ get_header(); ?>
 					</div>
 
           <div class="single-project-wrapper lmla-hidden">
-						<p class="project-title lmla-hiiden"><?php echo CFS()->get('project_title'); ?></p>
+						<p class="project-title lmla-hidden"><?php echo CFS()->get('project_title'); ?></p>
 
 						<div class="project-image lmla-hidden"><img src="<?php echo CFS()->get('project_image'); ?>"></div>
 
 						<style> .project-link-btn a {color: <?php echo CFS()->get('link_text_colour'); ?>;} </style>
 						<style> .project-link-btn {background: <?php echo CFS()->get('project_link_colour'); ?>;} </style>
 
-						<div class="project-link-btn lmla"><?php echo CFS()->get('projects_link'); ?></div>
+						<div class="project-link-btn lmla-hidden"><?php echo CFS()->get('projects_link'); ?></div>
 
 					</div>
 
@@ -188,7 +190,7 @@ get_header(); ?>
 						<h2 class="section-title lmla-hidden"><?php echo CFS()->get('request_title'); ?></h2>
 
 						<div class="request-form lmla-hidden">
-							<?php echo CFS()->get('request_form'); ?>
+							<?php echo CFS()->get('request2_form'); ?>
 						</div>
 					</div>
 

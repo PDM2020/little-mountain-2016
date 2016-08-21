@@ -28,8 +28,8 @@
 
 #lmla-close-btn .fa-times {
 	position: absolute;
-	top: -24px;
-	right: -24px;
+	top: -30px;
+	right: 0px;
   cursor: pointer;
   border-radius: 56px;
   color: #fff;
@@ -59,7 +59,6 @@
 	max-width: 600px;
 	padding: 10px;
 
-
 	}
 
 }
@@ -82,6 +81,25 @@ input[type="submit"] {
 	outline : none;
 }
 
+input[type="button"], .load-more-btn {
+	font-family: 'Roboto Light',sans-serif;
+  display:inline-block;
+  background-color: #F58E31;
+  text-align: center;
+  padding: .5em 1em;
+  border-radius: 5px;
+  font-size: 1.2em;
+  border:none;
+  color:#fff;
+
+}
+
+.pix-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+		margin-top:25px;
+		width:100%;
+}
 //search only
 input[type="submit"] {
 		margin:1em auto 1em auto;

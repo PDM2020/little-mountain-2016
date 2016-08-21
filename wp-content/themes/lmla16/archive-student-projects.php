@@ -14,27 +14,29 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-
-				<?php
-					the_archive_title( '<h2 class="page-title">', '</h2>' );
-
-				?>
-			</header><!-- .page-header -->
+			<div class="page-title">
+					<?php if(ICL_LANGUAGE_CODE=='en'): ?>
+						<h1>Student Projects</h1>
+					<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
+						<h1>学生作品集</h1>
+					<?php endif;?>
+			</div>
 				<ul class="blog-wrapper-outer">
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<li class="blog-wrapper">
 						<article id="post-<?php the_ID(); ?>">
-									<div class="project-image">
+
 										<?php
 										if ( has_post_thumbnail() ) { ?>
-												<?php the_post_thumbnail(); ?>
+											<div class="project-image">
+												<?php the_post_thumbnail('lmla-profile-pic'); ?>
+											</div>
 										<?php } ?>
-									</div>
 
-										<div class="blog-title">
+
+										<div class="page-title">
 												<?php the_title('<h2>', '</h2>' ); ?>
 										</div>
 									<div class="blog-content">
@@ -54,6 +56,7 @@ get_header(); ?>
 											</div>
 
 									</div>
+
 						</article><!-- #post-## -->
 						</li><!-- blog-wrapper-->
 

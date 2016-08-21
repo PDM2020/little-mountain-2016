@@ -1,13 +1,14 @@
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
+
 #page p {
 	padding:0 .5em 0 .5em
 }
 
 .site-content {
 	background-color: #FFF;
-	padding-top:6.3em;
+	padding-top:6em;
 }
 
 .content-area {
@@ -17,7 +18,7 @@
 /* Rules for sidebar left and sidebar right */
 @media screen and (min-width: 64em) {
 	.site-content {
-		padding-top: 10.1em;
+		padding-top: 9.1em;
 	}
 
 	#page {
@@ -89,10 +90,8 @@
 }
 
 .site-main {
-	margin: 1.2em auto 0;
 	font-size: 1em;
 	line-height: 1.6em;
-	margin-top: 1.2em;
 }
 
 
@@ -112,11 +111,4 @@
   margin-left: auto;
   margin-right: auto;
   width:100%;
-}
-
-@media screen and (min-width: 57em) {
-	.site-main {
-		// max-width: 45em;
-		margin: 0 auto;
-	}
 }

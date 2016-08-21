@@ -2,7 +2,7 @@
 // early literacy program
 .programs-header-image {
   padding: 0 0 2em;
-  max-width: 959px;
+  max-width: 828px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -87,21 +87,22 @@ img[src=""] {
 }
 
 // programs background color wrapper
-.post-48 {
+.post-48, .post-201 {
   background-color:#FCDFF1; //literacy program
 }
 
-.post-59 {
+
+.post-59, .post-203 {
   background-color:#FFF5C2; //esl program
 }
 
-.post-70 {
+.post-70, .post-208 {
   background-color:#FBD5AE; //enrichment program
 }
 
 @media screen and (min-width: 56em) {
 
-  .post-48, .post-59, .post-70 {
+  .post-48, .post-59, .post-70, .post-201, .post-203, .post-208 {
     background-color:#FFF;
   }
 
@@ -111,11 +112,6 @@ img[src=""] {
   text-align: left;
   margin-right: auto;
 
-}
-
-.animal-image {
-align-self: center;
-margin: 1em 0 2em 0;
 }
 
 } //media querie 26em

@@ -28,23 +28,33 @@
   padding-bottom: 1em;
 }
 
+.page-id-271 #hide-events-space,
+.page-id-273 #hide-events-space {
+  display:none
+}
+
+
 .text-wrapper {
-  margin: 1em 0.6em;
+  margin: 1em auto;
+  max-width: 600px;
 }
 
 .text-wrapper-special {
-  margin: 1em 0.6em;
+  margin: 1em auto;
   padding-top: 1em;
+  max-width: 600px;
 }
 
+
+
 .partner-link-btn {
-  display: inline-block;
+  text-align:center;
   margin-left: auto;
   margin-right: auto;
   padding: .8em 1.4em;
   border-radius: 10px;
   font-size: 1em;
-  max-width: 430px;
+  max-width: 200px;
   text-decoration: none;
 }
 

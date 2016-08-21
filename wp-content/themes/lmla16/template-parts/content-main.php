@@ -10,14 +10,16 @@
 ?>
 <li class="blog-wrapper">
 <article id="post-<?php the_ID(); ?>">
-			<div class="blog-image">
+
 				<?php
 				if ( has_post_thumbnail() ) { ?>
-						<?php the_post_thumbnail(); ?>
+					<div class="blog-image">
+						<?php the_post_thumbnail('lmla-blog-pic'); ?>
+					</div>
 				<?php } ?>
-			</div>
 
-				<div class="blog-title">
+
+				<div class="page-title">
 						<?php the_title('<h2>', '</h2>' ); ?>
 				</div>
 			<div class="blog-content">

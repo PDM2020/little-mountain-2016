@@ -18,7 +18,7 @@ function lmla16_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'render'    => 'lmla16_infinite_scroll_render',
-		'footer'    => 'page',
+		'footer'    => 'site-footer',
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -35,7 +35,7 @@ function lmla16_infinite_scroll_render() {
 		if ( is_search() ) :
 		    get_template_part( 'template-parts/content', 'search' );
 		else :
-		    get_template_part( 'template-parts/content', get_post_format() );
+		    get_template_part( 'template-parts/content-main', get_post_format() );
 		endif;
 	}
 } // end function lmla16_infinite_scroll_render

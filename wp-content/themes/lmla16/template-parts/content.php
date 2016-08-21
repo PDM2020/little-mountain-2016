@@ -8,15 +8,17 @@
 */
 
 ?>
-	
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="project-image">
+
 		<?php
 		if ( has_post_thumbnail() ) { ?>
-				<?php the_post_thumbnail(); ?>
+			<div class="project-image">
+				<?php the_post_thumbnail('lmla-blog-pic'); ?>
+			</div>
 		<?php } ?>
-	</div>
+
 
 		<div class="blog-title">
 				<?php the_title('<h2>', '</h2>' ); ?>

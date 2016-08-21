@@ -42,6 +42,8 @@ function lmla16_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 828, 360, true );
+	add_image_size ('lmla-blog-pic', 640, 426, true);
+	add_image_size ('lmla-profile-pic', 300, 200, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -168,8 +170,6 @@ function lmla_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	add_filter( 'wp_footer', 'lmla_overlay');
 	return '<div id="gform-notification">' . $confirmation . '<a id="lmla-close-btn" onClick="window.location.href=window.location.href"><i class="fa fa-times" aria-hidden="true"></i></a></div>';
 }
-// onclick="history.back(-3)"
-
 
 function lmla_overlay() {
 	echo '<div id="lmla-overlay"></div>';
@@ -184,23 +184,13 @@ function lmla_overlay() {
 		</script>
 	';
 }
-
-
-
-//re-order the staff categories
-function lmla_order_category( $query ) {
-	// exit out if it's the admin or it isn't the main query
-	if ( is_admin() || ! $query->is_main_query() ) {
-		return;
-	}
-	// order category archives by title in ascending order
-	if ( is_category() ) {
-		$query->set( 'order' , 'desc' );
-		$query->set( 'orderby', 'title');
-		return;
-	}
+// set the posts per page for teachers and staff archive page
+function set_posts_per_page_for_staff_cpt( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'teachers-and-staff' ) ) {
+    $query->set( 'posts_per_page', '15' );
+  }
 }
-add_action( 'pre_get_posts', 'lmla_order_category', 1 );
+add_action( 'pre_get_posts', 'set_posts_per_page_for_staff_cpt' );
 
 /**
  * Custom template tags for this theme.
@@ -216,8 +206,9 @@ require get_template_directory() . '/inc/extras.php';
 
 /**
  * Load Jetpack compatibility file.
+ * require get_template_directory() . '/inc/jetpack.php';
  */
-require get_template_directory() . '/inc/jetpack.php';
+
 
 	/** +++ turned off +++
 	*  Customizer additions.

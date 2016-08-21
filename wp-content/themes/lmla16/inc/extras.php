@@ -9,11 +9,28 @@
 * Adds language selector to footer
 */
 
-	function language_selector_flags(){
+	function language_selector_header(){
 		 if (function_exists('icl_get_languages')) {
 				 $languages = icl_get_languages('skip_missing=0&orderby=code&order=desc');
 				 $langs = '';
-				 echo '<div class="lang-pref"><ul>';
+				 echo '<div class="lang-pref-header "><ul>';
+						 if(!empty($languages)){
+								 foreach($languages as $l){
+										 $class = $l['active'] ? ' class="active"' : NULL;
+										 $langs .=  '<li><a' . $class . ' href="'.$l['url'].'">' . strtoupper ($l['native_name']). '</a></li>';
+								 }
+								 $langs = substr($langs,0,-3);
+								 echo $langs;
+						 }
+				 echo '</ul></div>';
+		 }
+	}
+
+	function language_selector_footer(){
+		 if (function_exists('icl_get_languages')) {
+				 $languages = icl_get_languages('skip_missing=0&orderby=code&order=desc');
+				 $langs = '';
+				 echo '<div class="lang-pref-footer"><ul>';
 						 if(!empty($languages)){
 								 foreach($languages as $l){
 										 $class = $l['active'] ? ' class="active"' : NULL;
@@ -71,16 +88,3 @@ function lmla16_filter_search($query) {
     return $query;
 };
 add_filter('pre_get_posts', 'lmla16_filter_search');
-
-//custom archive student projects page title
-function lmla16_sp_archive_title($title) {
-if (is_post_type_archive(array('student-projects'))) {
-	$title = 'Student Projects';
-
-} elseif (is_tax('student-projects-type')) {
-   $title = single_term_title('', false);
-
-}
-return $title;
-}
-add_filter('get_the_archive_title', 'lmla16_sp_archive_title');

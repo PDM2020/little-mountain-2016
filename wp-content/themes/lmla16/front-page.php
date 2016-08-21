@@ -1,7 +1,6 @@
 <?php
 /**
-
-* Template Name: Home Page
+* Template Name: Front Page
 *
 * This is the template that displays all pages by default.
 * Please note that this is the WordPress construct of pages
@@ -12,24 +11,14 @@
 *
 * @package Lmla16
 *
-* The template for displaying all pages.
- * Template Name: Home Page
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package Lmla16
- */
+*/
 
 get_header(); ?>
 
 <div id="primary" class="content-area">
 
 <main id="main" class="site-main" role="main">
-
+	<?php putRevSlider('homepage', 'homepage'); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <section> <!-- group 1 section -->
@@ -37,7 +26,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); // this is used for first course only ?>
 
 					<div class="page-title"> <!--_indexes.scss Core Programs -->
-						<?php the_title('<h2>', '</h2>' ); ?>
+						<?php the_title('<h1>', '</h1>' ); ?>
 					</div>
 
 					<div class="group-1-programs-wrapper">
@@ -78,7 +67,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-						<p><?php echo CFS()->get( 'gr1_course2_excerpt' ); ?></p>
+						<?php echo CFS()->get( 'gr1_course2_excerpt' ); ?>
 						</div>
 
 						<div class="more-info-homepage">
@@ -100,7 +89,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-					<p><?php echo CFS()->get( 'gr1_course3_excerpt' ); ?></p>
+					<?php echo CFS()->get( 'gr1_course3_excerpt' ); ?>
 						</div>
 
 						<div class="more-info-homepage">
@@ -116,7 +105,7 @@ get_header(); ?>
 			<!-- group 2 programs -->
 			<section class="group-2-bkgd">
 
-				<div class="page-title"> <!--_indexes.scss -->
+				<div class="page-title"> <!--_indexes.scss specialty -->
 					<h2>	<?php echo CFS()->get( 'gr2_title' ); ?></h2>
 				</div>
 
@@ -134,7 +123,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-							<p><?php echo CFS()->get( 'gr2_course1_excerpt' ); ?></p>
+							<?php echo CFS()->get( 'gr2_course1_excerpt' ); ?>
 						</div>
 
 						<div class="more-info-homepage">
@@ -156,7 +145,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-							<p><?php echo CFS()->get( 'gr2_course2_excerpt' ); ?></p>
+							<?php echo CFS()->get( 'gr2_course2_excerpt' ); ?>
 						</div>
 
 						<div class="more-info-homepage">
@@ -178,7 +167,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-							<p><?php echo CFS()->get( 'gr2_course3_excerpt' ); ?></p>
+							<?php echo CFS()->get( 'gr2_course3_excerpt' ); ?>
 						</div>
 
 						<div class="more-info-homepage">
@@ -200,7 +189,7 @@ get_header(); ?>
 						</div>
 
 						<div class="hp-course-excerpt">
-							<p><?php echo CFS()->get( 'gr2_course4_excerpt' ); ?></p>
+							<?php echo CFS()->get( 'gr2_course4_excerpt' ); ?>
 						</div>
 
 						<div class="more-info-homepage">
@@ -213,11 +202,11 @@ get_header(); ?>
 
 			</section> <!-- group-2-bkgd -->
 
-<!-- first video wrapper -->
+<!-- first video wrapper lmla difference -->
 
 			<div class="video-wrapper">
 
-				<div class="video-title">
+				<div class="page-title"> <!-- lmla difference -->
 					<h2><?php echo CFS()->get( 'video_title' ); ?></h2>
 				</div>
 
@@ -226,7 +215,7 @@ get_header(); ?>
 				</div>
 
 				<div class="video-image">
-					<img src="<?php echo CFS()->get( 'video_image' ); ?>">
+					<?php echo CFS()->get( 'video_content' ); ?>
 				</div>
 
 				<div class="video-quote">
@@ -234,35 +223,31 @@ get_header(); ?>
 				</div>
 
 				<div class="topic-button">
-					<?php echo CFS()->get( 'video1_button' ); ?>
+					<?php echo CFS()->get( 'video_link' ); ?>
 				</div>
 
-			</div> <!-- end first video wrapper -->
+			</div> <!-- end first video wrapper lmla difference -->
 
 <!-- 2nd video  wrapper -->
 <div class="video-3-bkgd">
 			<div class="video-wrapper">
 
-				<div class="video-title">
+				<div class="page-title"> <!-- student testimonials -->
 					<h2><?php echo CFS()->get( 'video2_title' ); ?></h2>
 				</div>
 
-				<div class="video-quote">
-					<h3><?php echo CFS()->get( 'video2_quote' ); ?></h3>
-				</div>
-
 				<div class="video-image">
-					<img src="<?php echo CFS()->get( 'video2_image' ); ?>">
+					<?php echo CFS()->get( 'video2_content' ); ?>
 				</div>
 
-			</div> <!-- 2nd video wrapper -->
+			</div> <!-- end 2nd video wrapper -->
 		</div>
 
 <!-- 1st single section wrapper -->
 
 			<div class="single-wrapper">
 
-				<div class="video-title">
+				<div class="page-title"> <!-- teachers -->
 					<h2><?php echo CFS()->get( 'single1_title' ); ?></h2>
 				</div>
 
@@ -275,7 +260,7 @@ get_header(); ?>
 				</div>
 
 				<div class="topic-button">
-					<span><?php echo CFS()->get( 'single1_button' ); ?></span>
+					<span><?php echo CFS()->get( 'single1_link' ); ?></span>
 				</div>
 
 			</div> <!-- end 1st single section wrapper -->
@@ -283,21 +268,20 @@ get_header(); ?>
 
 			<div class="single-wrapper"> <!-- steetview  wrapper -->
 
-				<div class="video-title">
+				<div class="page-title">
 					<h2><?php echo CFS()->get( 'single2_title' ); ?></h2>
 				</div>
 
-				<div class="video-image">
-					<a href="<?php echo CFS()->get( 'single2_link' ); ?>"><img src="<?php echo CFS()->get( 'single2_image' ); ?>"></a>
+				<div class="content-container embed-container maps">
+					<iframe style="pointer-events: none; border: 0;" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1469174012575!6m8!1m7!1shNhbQZx4u3IAAAQpjNnaGg!2m2!1d49.26589809285828!2d-123.2430078394774!3f155.01388625592418!4f1.013222748815167!5f0.4000000000000002" width="828" height="466" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 				</div>
 
 			</div> <!-- end steetview  wrapper -->
 
 <!-- newsletter wrapper -->
 			<div class="newsletter-bkgd">
-
-				<div class="newsletter-title">
-					<h2>~ LMLA Newsletter ~ </h2>
+				<div class="page-title">
+					<h2><?php echo CFS()->get( 'newsletter_title' ); ?></h2>
 				</div>
 
 				<div class="newsletter-form">
@@ -306,15 +290,15 @@ get_header(); ?>
 
 		</div> <!-- end newsletter wrapper -->
 
-		<div class="latest-blog-title"> <!--_indexes.scss -->
-			<h2>~ Latest Blog ~</h2>
+		<div class="page-title"> <!--_indexes.scss -->
+			<h2><?php echo CFS()->get( 'latest_blog_title' ); ?></h2>
 		</div>
 
 		<section class="hp-blog-wrapper">
 
 			<div class="hp-blog-post">
 
-					<!-- Define our WP Query Parameters -->
+					<!-- Define our WP Query Parameters (2 posts on homepage) -->
 					<?php $the_query = new WP_Query( 'posts_per_page=2' ); ?>
 
 					<!-- Start our WP Query -->
@@ -322,11 +306,12 @@ get_header(); ?>
 
 <ul>
 						<li>
-								<div class="topic-image">
 									<?php if ( has_post_thumbnail() ) : ?>
-									<?php the_post_thumbnail( 'large' ); ?>
+										<div class="topic-image">
+											<?php the_post_thumbnail( 'lmla-blog-pic'); ?>
+										</div>
 									<?php endif; ?>
-								</div>
+
 
 									<div class="hp-course-title"> <!--_indexes.scss -->
 										<?php the_title(); ?>
@@ -334,9 +319,9 @@ get_header(); ?>
 
 									<!-- Display the Post Excerpt -->
 									<div class="hp-course-excerpt">
-										<p><?php
+										<?php
 										the_excerpt();
-										?></p>
+										?>
 									</div>
 
 									<div class="more-info-homepage">
@@ -344,7 +329,7 @@ get_header(); ?>
 											<?php
 											printf(
 											/* Translators: %s = Name of the current post. */
-											wp_kses( __( 'Read on %s', 'Lmla16' ), array( 'span' => array( 'class' => array() ) ) ),
+											wp_kses( __( 'Read on %s', 'lmla16' ), array( 'span' => array( 'class' => array() ) ) ),
 											the_title( '<span class="screen-reader-text">"', '"</span>', false )
 										);
 										?>

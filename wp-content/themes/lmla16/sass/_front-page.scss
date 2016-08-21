@@ -1,3 +1,17 @@
+//hide pix plugins
+
+.page-template-front-page .page-title {
+    font-size:80%;
+  }
+
+
+//mapscroll de-activation
+.content-container {
+    margin:1em auto;
+    width: 828px; height: 466px;
+}
+//end mapscroll de-activation
+
 .lmla-partner-form {
   margin: 0 1em;
   padding: 0.5em;
@@ -22,7 +36,8 @@
 }
 
 .hp-blog-post li {
-  display:inline;
+    display: inline;
+    text-align: justify;
 }
 
 .group-2-programs-wrapper {
@@ -95,7 +110,9 @@
 }
 
 .more-info-homepage a::after {
-  content: " 》";
+  font-family:'fontawesome';
+  content: ' \f101';
+  // content: " 》";
 }
 
 .video-quote h3 {
@@ -112,23 +129,28 @@
   padding: .5em 1em;
   border-radius: 10px;
   font-size: 1.2em;
+  a{
+    text-decoration:none;
+  }
 }
 
-.gform_wrapper #gform_submit_button_20, //contact - done
-.gform_wrapper #gform_submit_button_22, //newsletter - done
-.gform_wrapper #gform_submit_button_32, //career - done
-.gform_wrapper #gform_submit_button_36, //summer intensive - done
-.gform_wrapper #gform_submit_button_33, //spring intensive - done
-.gform_wrapper #gform_submit_button_35, //accent reduction - done
-.gform_wrapper #gform_submit_button_39, //partnerships - done
-.gform_wrapper #gform_submit_button_34, // math - done
-.gform_wrapper #gform_submit_button_38, //innovators - done
-.gform_wrapper #gform_submit_button_37, //univercity prep - done
-.gform_wrapper #gform_submit_button_40, //butterfly-program - done
-.gform_wrapper #gform_submit_button_41, //hare-course - done
-.gform_wrapper #gform_submit_button_42 //rooster course - done
-.gform_wrapper #gform_submit_button_43 //fish course - done
-.gform_wrapper #gform_submit_button_44 //deer course - done
+
+.gform_wrapper #gform_submit_button_20, //contact
+.gform_wrapper #gform_submit_button_22, //newsletter
+.gform_wrapper #gform_submit_button_32, //career
+.gform_wrapper #gform_submit_button_33, //spring intensive
+.gform_wrapper #gform_submit_button_35, //accent reduction
+.gform_wrapper #gform_submit_button_39, //partnerships
+.gform_wrapper #gform_submit_button_34, // math
+.gform_wrapper #gform_submit_button_36, //summer intensive
+.gform_wrapper #gform_submit_button_38, //innovators
+.gform_wrapper #gform_submit_button_37, //univercity prep
+.gform_wrapper #gform_submit_button_40, //butterfly-program
+.gform_wrapper #gform_submit_button_41, //hare-course
+.gform_wrapper #gform_submit_button_42, //rooster course
+.gform_wrapper #gform_submit_button_43, //fish course
+.gform_wrapper #gform_submit_button_44, //deer course
+.gform_wrapper #gform_submit_button_45 //events
 {
   font-family: 'Roboto Light',sans-serif;
   display:inline-block;
@@ -141,10 +163,10 @@
   color:#fff;
 }
 
+.gform_wrapper #gform_submit_button_36,  //summer intensive
 .gform_wrapper #gform_submit_button_38 {
   background-color: #F58E31;
 }
-
 
 .topic-button a {
   text-decoration: none;
@@ -154,7 +176,7 @@
   color:#FFF;
 }
 .video-image, .topic-button {
-    margin-bottom:1em;
+    margin: 1em 0 1em 0;
 }
 
 .video-image, .topic-image  {
@@ -175,14 +197,13 @@
 
 @media screen and (min-width: 20em) {
 
-    h2 {
-      font-size:1.3em;
-    }
     .topic-button {
       font-size:1em;
     }
 
 }
+
+
 
 @media screen and (min-width: 26em) {
 
@@ -190,15 +211,17 @@
     font-size:1.2em;
   }
 
-  .hp-course-title {
-    font-size: 1.7em;
-  }
-  .page-title h2 {
-    font-size:2em;
-    padding-top: 1em;
-  }
 
 } // end 26em
+
+
+@media screen and (min-width: 45em) {
+
+  .page-template-front-page .page-title {
+    font-size:1.5em;
+  }
+
+} // end 40em
 
 @media screen and (min-width: 64em) { // 1024px
 
@@ -208,9 +231,9 @@
     }
 
   .group-course-wrapper {
-    padding-top: 10px;
     flex-direction: column;
-    align-items: flex-start;
+    padding-bottom:4em;
+    position:relative;
     }
 
   .hp-course-title {
@@ -219,7 +242,10 @@
 
   .more-info-homepage {
     font-size:1em;
-    align-self: flex-end;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
     }
 
   // group 2 programs
@@ -231,13 +257,19 @@
     }
 
   .hp-blog-wrapper {
+    position: relative;
     display: flex;
+    padding: 1em 0 0 1em;
     }
 
   .hp-blog-post {
     display: flex;
     flex: 1 0 50%;
-    padding-bottom: 1em;
+    }
+
+    .hp-blog-post li {
+      position: relative;
+      padding-bottom:4em;
     }
 
   .hp-blog-post ul {

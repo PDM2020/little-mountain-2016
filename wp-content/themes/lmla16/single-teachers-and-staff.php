@@ -21,12 +21,14 @@ get_header(); ?>
 			<article id="post-<?php the_ID(); ?>">
 
 				<div class="image-name-job-wrapper">
-					<div class="bio-image-wrapper">
+
 						<?php
 						if ( has_post_thumbnail() ) { ?>
-								<?php the_post_thumbnail(); ?>
+							<div class="bio-image-wrapper">
+								<?php the_post_thumbnail('lmla-profile-pic'); ?>
+							</div>
 						<?php } ?>
-					</div>
+
 						<div class="staff-wrapper">
 								<?php the_title( '<span id="staff-name" >', '</span>' ); ?>
 								<span id="job-title"><?php echo CFS()->get( 'staff_job_title' ); ?></span>

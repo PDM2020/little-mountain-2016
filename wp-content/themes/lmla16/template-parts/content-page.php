@@ -24,12 +24,12 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="text-wrapper-special">
+	<div class="text-wrapper-special lmla-hidden">
 		<?php the_content(); ?>
 
 	</div><!-- .entry-content -->
 
-	<section class="additional-content lmla-hidden">
+	<section id="hide-events-space" class="additional-content lmla-hidden">
 		<h2 class="section-title"><?php echo CFS()->get('mission_title_one'); ?></h2>
 
 
@@ -40,7 +40,7 @@
 		<div class="partner-link-btn"><?php echo CFS()->get('partner_link_one'); ?></div>
 	</section>
 
-	<section class="additional-content lmla-hidden">
+	<section id="hide-events-space" class="additional-content lmla-hidden">
 		<h2 class="section-title"><?php echo CFS()->get('mission_title_two'); ?></h2>
 
 		<img src="<?php echo CFS()->get('mission_image_one'); ?>"/>
@@ -49,7 +49,7 @@
 
 		<style> .partner-link-btn a {color: <?php echo CFS()->get('partner_text_color_two'); ?>;} </style>
 		<style> .partner-link-btn {background: <?php echo CFS()->get('partner_link_color_two'); ?>;} </style>
-		<div class="partner-link-btn"><?php echo CFS()->get('partner_link_two'); ?></div>
+		<div class="partner-link-btn lmla-hidden"><?php echo CFS()->get('partner_link_two'); ?></div>
 
 	</section>
 

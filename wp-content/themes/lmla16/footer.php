@@ -22,8 +22,8 @@
 				<p>Phone:&nbsp;<a href="tel:604-221-2363">604-221-2363</a><br/>
 				Address: Suite 213 - 2150 Western Parkway, Vancouver British Columbia, Canada, V6T 1V6</p>
 			<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
-				<h2>联系信息</h2>
-				<p>电话:&nbsp;<a href="tel:604-221-2363">604-221-2363</a><br/>
+				<h2>联络我们</h2>
+				<p>电话号码:&nbsp;<a href="tel:604-221-2363">604-221-2363</a><br/>
 				地址: Suite 213 - 2150 Western Parkway, Vancouver British Columbia, Canada, V6T 1V6</p>
 			<?php endif;?>
 
@@ -34,7 +34,7 @@
 			<?php if(ICL_LANGUAGE_CODE=='en'): ?>
 				<h2>Follow us on social media</h2>
 			<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
-				<h2>按照我们在社交媒体</h2>
+				<h2>关注我们</h2>
 			<?php endif;?>
 
 			<ul>
@@ -44,18 +44,18 @@
 			</ul>
 		</div>
 
-<div class="lang-pref-wrapper">
+<div class="lang-pref-footer-wrapper">
 
 				<div>
 				<?php if(ICL_LANGUAGE_CODE=='en'): ?>
 					<h2>Language Preferences</h2>
 				<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
-					<h2>语言首选项</h2>
+					<h2>语言偏好设定</h2>
 				<?php endif;?>
 				</div>
 
-				<div id="footer_language_list" >
-					<?php language_selector_flags(); ?>
+				<div id="language_list_footer" >
+					<?php language_selector_footer(); ?>
 				</div>
 
 </div>
@@ -69,7 +69,7 @@
 			<?php if(ICL_LANGUAGE_CODE=='en'): ?>
 				<?php printf( esc_html( 'Copyright &copy;'),'lmla16'); ?> <?php _e(date('Y')); ?>	<span>&bull;</span> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( 'Little Mountain Learning Academy' ), 'lmla16' ); ?></a> <span>&bull;</span> <a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( 'Login' ), 'lmla16' ); ?></a>
 			<?php elseif(ICL_LANGUAGE_CODE=='zh-hans'): ?>
-				<?php printf( esc_html( '版权 &copy;'),'lmla16'); ?> <?php _e(date('Y')); ?>	<span>&bull;</span> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( 'Little Mountain Learning Academy' ), 'lmla16' ); ?></a> <span>&bull;</span> <a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( '登录' ), 'lmla16' ); ?></a><?php endif;?>
+				<?php printf( esc_html( '版权所有 &copy;'),'lmla16'); ?> <?php _e(date('Y')); ?>	<span>&bull;</span> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php printf( esc_html( ' 小山学校' ), 'lmla16' ); ?></a> <span>&bull;</span> <a href="<?php echo esc_url( '/wp-admin/' ); ?>"><?php printf( esc_html( '登入' ), 'lmla16' ); ?></a><?php endif;?>
 			<!-- -->
 		</div><!-- .site-info -->
 
